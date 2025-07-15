@@ -3,16 +3,14 @@
 import {
     Box,
     Flex,
-    IconButton,
     LinkBox,
     LinkOverlay,
     Stack,
     Text,
-    useBreakpointValue,
     useDisclosure
 } from '@chakra-ui/react'
-import { useColorModeValue } from './ui/color-mode'
 import { Logo } from './Logo'
+import { useColorModeValue } from './ui/color-mode'
 
 export default function NavBar() {
     const { open, onToggle } = useDisclosure()
@@ -36,7 +34,12 @@ export default function NavBar() {
                         aria-label={'Toggle Navigation'}
                     />
                 </Flex> */}
-                <Logo color={'gray.800'} />
+
+                <LinkBox
+                    as="button">
+                    <LinkOverlay
+                        href={'/'} ><Logo color={'gray.800'} /></LinkOverlay>
+                </LinkBox>
                 <Flex flex={1} justify={{ base: 'center', md: 'center' }} paddingRight={40} >
                     <DesktopNav />
                 </Flex>
@@ -119,11 +122,11 @@ interface NavItem {
 const NAV_ITEMS: Array<NavItem> = [
     {
         label: 'TRIP TODO',
-        href: '#',
+        href: '/',
     },
     {
         label: '앱 미리보기',
-        href: '#',
+        href: 'trial',
     },
     {
         label: 'CONTACT',

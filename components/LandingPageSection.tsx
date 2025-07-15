@@ -23,7 +23,6 @@ export const LandingPageSection = ({ title, body, image }: FeatureSectionProps) 
                 align={'center'}
                 justifyContent={'center'}
                 gap={{ base: 12, md: 12 }}
-                px={{ base: 36, md: 36 }}
                 py={{ base: 24, md: 24 }}
                 direction={{ base: 'column', md: 'row' }}>
                 {image}

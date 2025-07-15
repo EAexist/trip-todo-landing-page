@@ -1,12 +1,12 @@
 import { createSystem, defaultConfig, defineConfig } from "@chakra-ui/react"
-import { headingRecipe } from "../components/recipe/heading.recipe"
-import { textRecipe } from "../components/recipe/text.recipe"
-import { flexRecipe } from "../components/recipe/flex.recipe"
-import { buttonRecipe } from "../components/recipe/button.recipe"
-import { cardRecipe } from "../components/recipe/card.recipe"
+import { headingRecipe } from "@/components/recipe/heading.recipe"
+import { textRecipe } from "@/components/recipe/text.recipe"
+import { flexRecipe } from "@/components/recipe/flex.recipe"
+import { buttonRecipe } from "@/components/recipe/button.recipe"
+import { cardRecipe } from "@/components/recipe/card.recipe"
 
 
-const customConfig = defineConfig({
+export const appConfig = defineConfig({
     theme: {
         tokens: {
             fonts: {
@@ -59,4 +59,4 @@ const customConfig = defineConfig({
     },
 })
 
-export const system = createSystem(defaultConfig, customConfig)
+export const system = createSystem(defaultConfig, appConfig)

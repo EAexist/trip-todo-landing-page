@@ -1,16 +1,16 @@
+import LandingPageFooter from "@/components/LandingPageFooter"
+import NavBar from "@/components/NavBar"
+import {
+    Container
+} from "@chakra-ui/react"
 import localFont from 'next/font/local'
 import Provider from "./provider"
-// import { Archivo } from 'next/font/google'
 
 const pretendardVariable = localFont({
     src: './font/PretendardVariable.woff2',
     variable: "--font-pretendard-variable"
 })
 
-
-// const geist = Archivo({
-//   subsets: ['latin'],
-// })
 export default function RootLayout({
     children,
 }: {
@@ -20,7 +20,18 @@ export default function RootLayout({
         <html className={pretendardVariable.className} suppressHydrationWarning>
             <head />
             <body>
-                <Provider>{children}</Provider>
+                <Provider>
+                    <Container px={0} py={0} maxWidth={'full'}>
+                        <NavBar />
+                        {children}
+                        <LandingPageFooter />
+                        {/* <Box pos="absolute" top="4" right="4">
+                            <ClientOnly fallback={<Skeleton w="10" h="10" rounded="md" />}>
+                                <ColorModeToggle />
+                            </ClientOnly>
+                        </Box> */}
+                    </Container>
+                </Provider>
             </body>
         </html>
     )

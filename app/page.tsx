@@ -1,28 +1,18 @@
 import {
     Box,
-    ClientOnly,
-    Container,
-    Flex,
+    BoxProps,
     Heading,
-    IconButton,
-    Skeleton,
-    VStack,
     Image,
-    Text,
     Stack,
-    BoxProps
+    Text
 } from "@chakra-ui/react"
-import { ColorModeToggle } from "../components/color-mode-toggle"
-import FeatureSummarySection from "../components/section/FeatureSummarySection"
-import { HeroSection } from "../components/HeroSection"
-import LargeWithNewsletteLandingPageFooter from "../components/LandingPageFooter"
-import { LandingPageSection } from "../components/LandingPageSection"
-import NavBar from "../components/NavBar"
-import { TicketFeatureSection } from "../components/section/TicketFeatureSection"
+import { HeroSection } from "@/components/HeroSection"
+import { LandingPageSection } from "@/components/LandingPageSection"
+import FeatureSummarySection from "@/components/section/FeatureSummarySection"
+import { TicketFeatureSection } from "@/components/section/TicketFeatureSection"
 export default async function Page() {
     return (
-        <Container px={0} py={0} maxWidth={'full'}>
-            <NavBar />
+        <>
             <HeroSection
                 title={
                     <Stack>
@@ -39,29 +29,22 @@ export default async function Page() {
                             여행은 가고 싶지만 준비할 게 너무 많아 걱정이라면
                             <br />
                             TRIP TODO 와 함께 간편하게 여행을 준비해보세요
-                        </Text></>} image={<ImagePlaceHolder width={400} height={400} />} />
+                        </Text></>} image={<ImagePlaceHolder flex={1} flexBasis={'auto'} />} />
             <FeatureSummarySection />
             <LandingPageSection title={<>티켓과 예약 내역이 필요할 때<br />간편하게 꺼내보기</>} body={<>인터넷 브라우저, 항공사 앱, 숙소 예약 앱, 종이 티켓에 담아다니던 예약 내역<br />이젠 한 곳에 모아 여행 중 클릭 한번으로 이용해보세요</>} image={<ImagePlaceHolder width={433} height={433} />} />
             <TicketFeatureSection />
             <LandingPageSection title={<>일일이 옮겨 적을 필요 없이<br />화면 캡쳐만으로 내 예약 관리하기</>} body={<>일일이 옮겨 적을 필요 없이 화면 캡쳐만으로 내 예약 관리하기</>} image={<ImagePlaceHolder width={433} height={433} />} />
-            <LargeWithNewsletteLandingPageFooter />
-            <Box pos="absolute" top="4" right="4">
-                <ClientOnly fallback={<Skeleton w="10" h="10" rounded="md" />}>
-                    <ColorModeToggle />
-                </ClientOnly>
-            </Box>
-        </Container>
+        </>
     )
 }
-
 
 const ImagePlaceHolder = (props: BoxProps) =>
     <Box
         position={'relative'}
-        height={'300px'}
+        aspectRatio={1}
         rounded={'2xl'}
         boxShadow={'2xl'}
-        width={'300px'}
+        width={'300'}
         overflow={'hidden'} {...props}>
         <Image
             alt={'Hero Image'}

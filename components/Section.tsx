@@ -6,7 +6,7 @@ import { PropsWithChildren } from 'react'
 
 export const Section = ({ children, ...props }: PropsWithChildren<FlexProps>) => {
     return (
-        <Flex as="section" justify={"center"} {...props}>
+        <Flex as="section" justify={"center"} {...props} px={{ base: 6, md: 12 }}>
             {children}
         </Flex>
     )
