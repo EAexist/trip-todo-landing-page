@@ -31,8 +31,7 @@ const SocialButton = ({
             w={8}
             h={8}
             cursor={'pointer'}
-            as={'a'}
-            // href={href}
+            asChild
             display={'inline-flex'}
             alignItems={'center'}
             justifyContent={'center'}
@@ -40,8 +39,10 @@ const SocialButton = ({
             _hover={{
                 bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
             }}>
-            <VisuallyHidden>{label}</VisuallyHidden>
-            {children}
+            <a
+                href={href}>
+                <VisuallyHidden>{label}</VisuallyHidden>
+                {children}</a>
         </chakra.button>
     )
 }
