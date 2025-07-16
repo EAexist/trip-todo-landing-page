@@ -1,7 +1,3 @@
-// "use client"
-
-import { useEffect, useState } from "react";
-
 export default function AppIframe() {
     // const [iframeSrc, setIframeSrc] = useState<string>();
 
