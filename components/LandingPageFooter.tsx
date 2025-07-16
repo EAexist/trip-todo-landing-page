@@ -13,6 +13,7 @@ import { FaGithub } from 'react-icons/fa'
 import { Logo } from './Logo'
 import { Section } from './Section'
 import { useColorModeValue } from './ui/color-mode'
+import { SiNotion } from 'react-icons/si'
 
 
 const SocialButton = ({
@@ -63,26 +64,27 @@ export default function LargeWithNewsletteLandingPageFooter() {
             color={"neutral.silver"}
             px={{ base: 40, md: 40, }}
             py={{ base: 16, md: 16, }}>
-            <Stack maxWidth={"7xl"} width={"100%"} direction={{ base: "row", md: "row", }} gap={{ base: 0, md: 120 }}>
+            <Stack maxWidth={"7xl"} width={"100%"} direction={{ base: "row", md: "row", }} gap={{ base: 8, md: 120 }}>
                 <Stack gap={6}>
                     <Stack gap={2}>
-                        <Box>
-                            <Logo />
-                        </Box>
+                        <Logo />
                         <Text color={"neutral.silver"} fontSize={'sm'}>© 2025 EAexist.<br />All rights reserved</Text>
                     </Stack>
-                    <Stack direction={'row'} gap={6} alignItems={"center"}>
+                    <Stack direction={'row'} gap={4} alignItems={"center"}>
                         <SocialButton label={'Github'} href={process.env.NEXT_PUBLIC_EAEXIST_GITHUB_URL}>
                             <FaGithub />
                         </SocialButton>
+                        <SocialButton label={'Notion'} href={process.env.NEXT_PUBLIC_EAEXIST_RESUME_URL}>
+                            <SiNotion />
+                        </SocialButton>
                     </Stack>
                 </Stack>
-                <Stack direction="row" gap={{ base: 0, md: 7 }}>
+                <Stack direction="row" gap={{ base: 0, md: 7 }} mt={{ base: 1, md: 1 }}>
                     <Stack gap={{ base: 6, md: 6 }} minW={{ base: 0, md: 40 }}>
                         <ListHeader>EAexist</ListHeader>
                         <Stack gap={{ base: 3, md: 3 }}>
                             <Box asChild>
-                                <a href={process.env.NEXT_PUBLIC_EAEXIST_GITHUB_URL}>
+                                <a href={process.env.NEXT_PUBLIC_EAEXIST_RESUME_URL}>
                                     <Text color={"neutral.silver"} fontWeight={"regular"} fontSize={"sm"}>
                                         About Me
                                     </Text>
