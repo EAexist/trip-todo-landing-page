@@ -7,7 +7,6 @@ import {
     Stack
 } from "@chakra-ui/react";
 import { ChevronRight } from "lucide-react";
-import 'react-device-frameset/styles/marvel-devices.min.css';
 
 export default async function Page() {
 
