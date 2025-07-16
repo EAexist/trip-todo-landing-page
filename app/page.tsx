@@ -31,9 +31,9 @@ export default async function Page() {
                             TRIP TODO 와 함께 간편하게 여행을 준비해보세요
                         </Text></>} image={<ImagePlaceHolder flex={1} flexBasis={'auto'} />} />
             <FeatureSummarySection />
-            <LandingPageSection title={<>티켓과 예약 내역이 필요할 때<br />간편하게 꺼내보기</>} body={<>인터넷 브라우저, 항공사 앱, 숙소 예약 앱, 종이 티켓에 담아다니던 예약 내역<br />이젠 한 곳에 모아 여행 중 클릭 한번으로 이용해보세요</>} image={<ImagePlaceHolder width={433} height={433} />} />
+            <LandingPageSection title={<>티켓과 예약 내역이 필요할 때<br />간편하게 꺼내보기</>} body={<>인터넷 브라우저, 항공사 앱, 숙소 예약 앱, 종이 티켓에 담아다니던 예약 내역<br />이젠 한 곳에 모아 여행 중 클릭 한번으로 이용해보세요</>} image={<ImagePlaceHolder />} />
             <TicketFeatureSection />
-            <LandingPageSection title={<>일일이 옮겨 적을 필요 없이<br />화면 캡쳐만으로 내 예약 관리하기</>} body={<>일일이 옮겨 적을 필요 없이 화면 캡쳐만으로 내 예약 관리하기</>} image={<ImagePlaceHolder width={433} height={433} />} />
+            <LandingPageSection title={<>일일이 옮겨 적을 필요 없이<br />화면 캡쳐만으로 내 예약 관리하기</>} body={<>일일이 옮겨 적을 필요 없이 화면 캡쳐만으로 내 예약 관리하기</>} image={<ImagePlaceHolder />} />
         </>
     )
 }
@@ -44,7 +44,7 @@ const ImagePlaceHolder = (props: BoxProps) =>
         aspectRatio={1}
         rounded={'2xl'}
         boxShadow={'2xl'}
-        width={'300'}
+        width={300}
         overflow={'hidden'} {...props}>
         <Image
             alt={'Hero Image'}

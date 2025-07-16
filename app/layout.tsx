@@ -1,6 +1,7 @@
 import LandingPageFooter from "@/components/LandingPageFooter"
 import NavBar from "@/components/NavBar"
 import {
+    Box,
     Container
 } from "@chakra-ui/react"
 import localFont from 'next/font/local'
@@ -21,15 +22,11 @@ export default function RootLayout({
             <head />
             <body>
                 <Provider>
-                    <Container px={0} py={0} maxWidth={'full'}>
+                    <Container px={0} py={0} >
                         <NavBar />
+                        <Box h={10} />
                         {children}
                         <LandingPageFooter />
-                        {/* <Box pos="absolute" top="4" right="4">
-                            <ClientOnly fallback={<Skeleton w="10" h="10" rounded="md" />}>
-                                <ColorModeToggle />
-                            </ClientOnly>
-                        </Box> */}
                     </Container>
                 </Provider>
             </body>

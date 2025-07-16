@@ -3,6 +3,7 @@
 import {
     Box,
     Flex,
+    IconButton,
     LinkBox,
     LinkOverlay,
     Stack,
@@ -11,43 +12,47 @@ import {
 } from '@chakra-ui/react'
 import { Logo } from './Logo'
 import { useColorModeValue } from './ui/color-mode'
+import { Menu, X } from 'lucide-react'
 
 export default function NavBar() {
     const { open, onToggle } = useDisclosure()
 
     return (
-        <Box as="header" position="fixed" w={"100%"} bg={"white"} zIndex={1000}>
+        <Flex as="header" position="fixed" bg={"white"} zIndex={1000} w={"100vw"} >
             <Flex
                 minH={'60px'}
                 align={'center'}
                 flex={1}
-                px={{ base: 6, md: 6 }}
+                px={{ base: 2, md: 6 }}
             >
-                {/* <Flex
-                    flex={{ base: 1, md: 'auto' }}
-                    ml={{ base: -2 }}
-                    display={{ base: 'flex', md: 'none' }}>
+                <Flex
+                    hideFrom={"md"}
+                // flex={{ base: 1, md: 'auto' }}
+                // ml={{ base: -2 }}
+                >
                     <IconButton
                         onClick={onToggle}
-                        // icon={open ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />}
                         variant={'ghost'}
                         aria-label={'Toggle Navigation'}
-                    />
-                </Flex> */}
-
-                <LinkBox
-                    as="button">
-                    <LinkOverlay
-                        href={'/'} ><Logo color={'gray.800'} /></LinkOverlay>
-                </LinkBox>
-                <Flex flex={1} justify={{ base: 'center', md: 'center' }} paddingRight={40} >
+                    >
+                        {open ? <X width={3} /> : <Menu width={5} />}
+                    </IconButton>
+                </Flex>
+                <Flex flex={{ base: 1, md: 'none' }} paddingRight={{ base: 10, md: 0 }} justify={{ base: 'center' }} >
+                    <LinkBox
+                        as="button" >
+                        <LinkOverlay
+                            href={'/'}><Logo color={'gray.800'} /></LinkOverlay>
+                    </LinkBox>
+                </Flex>
+                <Flex hideBelow={"md"} flex={1} justify={{ base: 'center', md: 'center' }} paddingRight={40}>
                     <DesktopNav />
                 </Flex>
             </Flex>
             {/* <Collapse in={isOpen} animateOpacity>
                 <MobileNav />
             </Collapse> */}
-        </Box>
+        </Flex>
     )
 }
 

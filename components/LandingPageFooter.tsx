@@ -10,7 +10,7 @@ import {
     VisuallyHidden
 } from '@chakra-ui/react'
 import { ReactNode } from 'react'
-import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { FaGithub, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
 import { Section } from './Section'
 import { useColorModeValue } from './ui/color-mode'
 import { Logo } from './Logo'
@@ -63,49 +63,47 @@ export default function LargeWithNewsletteLandingPageFooter() {
             color={"neutral.silver"}
             px={{ base: 40, md: 40, }}
             py={{ base: 16, md: 16, }}>
-            <Stack maxWidth={"7xl"} width={"100%"} direction={{ base: "row", md: "row", }} gap={{ base: 120, md: 120 }}>
+            <Stack maxWidth={"7xl"} width={"100%"} direction={{ base: "row", md: "row", }} gap={{ base: 0, md: 120 }}>
                 <Stack gap={6}>
-                    <Box>
-                        <Logo />
-                    </Box>
-                    <Text color={"neutral.silver"} fontSize={'sm'}>© 2025 EAexist.<br />All rights reserved</Text>
-                    <Stack direction={'row'} gap={6}>
-                        <SocialButton label={'Twitter'} href={'#'}>
-                            <FaTwitter />
-                        </SocialButton>
-                        <SocialButton label={'YouTube'} href={'#'}>
-                            <FaYoutube />
-                        </SocialButton>
-                        <SocialButton label={'Instagram'} href={'#'}>
-                            <FaInstagram />
+                    <Stack gap={2}>
+                        <Box>
+                            <Logo />
+                        </Box>
+                        <Text color={"neutral.silver"} fontSize={'sm'}>© 2025 EAexist.<br />All rights reserved</Text>
+                    </Stack>
+                    <Stack direction={'row'} gap={6} alignItems={"center"}>
+                        <SocialButton label={'Github'} href={'#'}>
+                            <FaGithub />
                         </SocialButton>
                     </Stack>
                 </Stack>
-                <Stack direction="row" gap={{ base: 7, md: 7, }}>
-                    <Stack gap={{ base: 6, md: 6 }} minW={160}>
+                <Stack direction="row" gap={{ base: 0, md: 7 }}>
+                    <Stack gap={{ base: 6, md: 6 }} minW={{ base: 0, md: 40 }}>
                         <ListHeader>EAexist</ListHeader>
                         <Stack gap={{ base: 3, md: 3 }}>
-                            <Box as="a">
-                                <Text color={"neutral.silver"} fontWeight={"regular"} fontSize={"sm"}>
-                                    About Us</Text>
+                            <Box asChild>
+                                <a href={"https://github.com/EAexist"}>
+                                    <Text color={"neutral.silver"} fontWeight={"regular"} fontSize={"sm"}>
+                                        About Me
+                                    </Text>
+                                </a>
                             </Box>
-                            <Box as="a">
-                                <Text color={"neutral.silver"} fontWeight={"regular"} fontSize={"sm"}>
-                                    Github</Text>
-                            </Box>
-                            <Box as="a">
-                                <Text color={"neutral.silver"} fontWeight={"regular"} fontSize={"sm"}>
-                                    Contact Us</Text>
+                            <Box asChild>
+                                <a href={"https://github.com/EAexist"}>
+                                    <Text color={"neutral.silver"} fontWeight={"regular"} fontSize={"sm"}>
+                                        Github
+                                    </Text>
+                                </a>
                             </Box>
                         </Stack>
                     </Stack>
-                    <Stack gap={{ base: 6, md: 6 }} minW={160}>
+                    {/* <Stack gap={{ base: 6, md: 6 }} minW={{ base: 0, md: 40 }}>
                         <ListHeader>Support</ListHeader>
                         <Box as="a">
                             <Text color={"neutral.silver"} fontWeight={"regular"} fontSize={"sm"}>
                                 Help Center</Text>
                         </Box>
-                    </Stack>
+                    </Stack> */}
                 </Stack>
             </Stack>
         </Section>

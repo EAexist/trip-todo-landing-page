@@ -4,7 +4,7 @@ export const Logo = (props?: TextProps) => {
     return (
         <Stack direction='row' align='center' width={160} as='span'>
             <Image
-                src="/static/app-logo.png"
+                src="/static/app/logo.png"
                 alt="app logo"
                 width={8}
                 height={8}
