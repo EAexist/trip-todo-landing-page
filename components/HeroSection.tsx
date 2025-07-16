@@ -25,8 +25,10 @@ export const HeroSection = ({ title, body, image }: HeroSectionProps) => {
                         {title}
                         {body}
                     </Stack>
-                    <Button>
-                        앱 미리보기
+                    <Button asChild>
+                        <a href={'trial'}>
+                            앱 미리보기
+                        </a>
                     </Button>
                 </Stack>
                 {image}

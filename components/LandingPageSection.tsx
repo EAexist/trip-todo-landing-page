@@ -33,8 +33,10 @@ export const LandingPageSection = ({ title, body, image }: FeatureSectionProps) 
                             {body}
                         </Text>
                     </Stack>
-                    <Button>
-                        앱 미리보기
+                    <Button asChild>
+                        <a href={'trial'}>
+                            앱 미리보기
+                        </a>
                     </Button>
                 </Stack>
             </Stack>

@@ -22,7 +22,7 @@ const SocialButton = ({
 }: {
     children: ReactNode
     label: string
-    href: string
+    href?: string
 }) => {
     return (
         <chakra.button
@@ -72,7 +72,7 @@ export default function LargeWithNewsletteLandingPageFooter() {
                         <Text color={"neutral.silver"} fontSize={'sm'}>© 2025 EAexist.<br />All rights reserved</Text>
                     </Stack>
                     <Stack direction={'row'} gap={6} alignItems={"center"}>
-                        <SocialButton label={'Github'} href={'https://github.com/EAexist'}>
+                        <SocialButton label={'Github'} href={process.env.NEXT_PUBLIC_EAEXIST_GITHUB_URL}>
                             <FaGithub />
                         </SocialButton>
                     </Stack>
@@ -82,14 +82,14 @@ export default function LargeWithNewsletteLandingPageFooter() {
                         <ListHeader>EAexist</ListHeader>
                         <Stack gap={{ base: 3, md: 3 }}>
                             <Box asChild>
-                                <a href={"https://github.com/EAexist"}>
+                                <a href={process.env.NEXT_PUBLIC_EAEXIST_GITHUB_URL}>
                                     <Text color={"neutral.silver"} fontWeight={"regular"} fontSize={"sm"}>
                                         About Me
                                     </Text>
                                 </a>
                             </Box>
                             <Box asChild>
-                                <a href={"https://github.com/EAexist"}>
+                                <a href={process.env.NEXT_PUBLIC_EAEXIST_GITHUB_URL}>
                                     <Text color={"neutral.silver"} fontWeight={"regular"} fontSize={"sm"}>
                                         Github
                                     </Text>
