@@ -72,7 +72,7 @@ export default function LargeWithNewsletteLandingPageFooter() {
                         <Text color={"neutral.silver"} fontSize={'sm'}>© 2025 EAexist.<br />All rights reserved</Text>
                     </Stack>
                     <Stack direction={'row'} gap={6} alignItems={"center"}>
-                        <SocialButton label={'Github'} href={'#'}>
+                        <SocialButton label={'Github'} href={'https://github.com/EAexist'}>
                             <FaGithub />
                         </SocialButton>
                     </Stack>
