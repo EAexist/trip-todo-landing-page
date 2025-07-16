@@ -1,10 +1,6 @@
 import {
-    Box,
     Button,
-    Flex,
-    Heading,
-    Stack,
-    Text
+    Stack
 } from '@chakra-ui/react'
 import { ReactNode } from 'react'
 import { Section } from './Section'

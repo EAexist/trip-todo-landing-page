@@ -1,7 +1,6 @@
 "use client"
 
-import { Flex, useBreakpoint } from "@chakra-ui/react";
-import dynamic from "next/dynamic";
+import { Flex } from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
 import { IPhoneMockup } from "react-device-mockup";
 import AppIframe from "./AppIframe";

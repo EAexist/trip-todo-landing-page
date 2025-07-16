@@ -9,11 +9,9 @@ import {
     Text,
     VStack
 } from '@chakra-ui/react'
-import { FC, ReactNode } from 'react'
-import { Section } from '../Section'
 import { BedDouble, FilePenLine, LucideProps, Ticket, TicketsPlane } from 'lucide-react'
-import { useColorModeValue } from '../ui/color-mode'
-import { appConfig, system } from '../../app/theme'
+import { FC } from 'react'
+import { Section } from '../Section'
 
 export interface FeatureItem {
     title: string

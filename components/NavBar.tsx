@@ -1,7 +1,6 @@
 "use client"
 
 import {
-    Box,
     Flex,
     IconButton,
     LinkBox,
@@ -10,9 +9,9 @@ import {
     Text,
     useDisclosure
 } from '@chakra-ui/react'
+import { Menu, X } from 'lucide-react'
 import { Logo } from './Logo'
 import { useColorModeValue } from './ui/color-mode'
-import { Menu, X } from 'lucide-react'
 
 export default function NavBar() {
     const { open, onToggle } = useDisclosure()

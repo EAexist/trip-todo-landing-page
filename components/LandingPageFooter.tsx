@@ -4,16 +4,15 @@ import {
     Box,
     chakra,
     Heading,
-    Image,
     Stack,
     Text,
     VisuallyHidden
 } from '@chakra-ui/react'
 import { ReactNode } from 'react'
-import { FaGithub, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { FaGithub } from 'react-icons/fa'
+import { Logo } from './Logo'
 import { Section } from './Section'
 import { useColorModeValue } from './ui/color-mode'
-import { Logo } from './Logo'
 
 
 const SocialButton = ({
