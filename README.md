@@ -1,75 +1,134 @@
-# TypeScript Next.js Chakra example
+<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+<a id="readme-top"></a>
+<!--
+*** Thanks for checking out the Best-README-Template. If you have a suggestion
+*** that would make this better, please fork the repo and create a pull request
+*** or simply open an issue with the tag "enhancement".
+*** Don't forget to give the project a star!
+*** Thanks again! Now go create something AMAZING! :D
+-->
 
-This is a really simple project that shows the usage of Next.js with TypeScript.
 
-## Deploy your own
 
-Deploy the example using [Vercel](https://vercel.com):
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/next.js/tree/canary/examples/with-typescript)
 
-## How to use it?
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/EAexist/trip-todo">
+    <img src="public/static/app/logo.png" alt="Logo" width="80" height="80">
+  </a>
 
-### Using `create-next-app`
+<h3 align="center">TRIP TODO Landing Page</h3>
 
-Execute
-[`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)
-with [npm](https://docs.npmjs.com/cli/init) or
-[Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+  <p align="center">
+    Landing Page for TRIP TODO, a mobile todolist application that assists you with planning a trip 
+  </p>
+</div>
 
-```bash
-npx create-next-app --example with-typescript with-typescript-app
-# or
-yarn create next-app --example with-typescript with-typescript-app
-```
 
-### Download manually
 
-Download the example:
+<!-- TABLE OF CONTENTS -->
 
-```bash
-curl https://codeload.github.com/vercel/next.js/tar.gz/canary | tar -xz --strip=2 next.js-canary/examples/with-typescript
-cd with-typescript
-```
 
-Install it and run:
 
-```bash
-npm install
-npm run dev
-# or
-yarn
-yarn dev
-```
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-Deploy it to the cloud with
-[Vercel](https://vercel.com/import?filter=next.js&utm_source=github&utm_medium=readme&utm_campaign=next-example)
-([Documentation](https://nextjs.org/docs/deployment)).
+  TRIP TODO is a mobile todolist application that assists you with planning a trip. This repository builds a landing page for TRIP TODO. Built with react, next.js.
+  
 
-## Notes
 
-This example shows how to integrate the TypeScript type system into Next.js.
-Since TypeScript is supported out of the box with Next.js, all we have to do is
-to install TypeScript.
+### Built With
 
-```
-npm install --save-dev typescript
-```
+* [![React][React.js]][React-url]
+* [![Next.js][Next.js]][Next-url]
+  
 
-To enable TypeScript's features, we install the type declarations for React and
-Node.
 
-```
-npm install --save-dev @types/react @types/react-dom @types/node
-```
+<!-- GETTING STARTED -->
+## Getting Started
 
-When we run `next dev` the next time, Next.js will start looking for any `.ts`
-or `.tsx` files in our project and builds it. It even automatically creates a
-`tsconfig.json` file for our project with the recommended settings.
+### Prerequisites
 
-Next.js has built-in TypeScript declarations, so we'll get autocompletion for
-Next.js' modules straight away.
+* Install npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
-A `type-check` script is also added to `package.json`, which runs TypeScript's
-`tsc` CLI in `noEmit` mode to run type-checking separately. You can then include
-this, for example, in your `test` scripts.
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/EAexist/trip-todo-landing-page.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Change git remote url to avoid accidental pushes to base project
+   ```sh
+   git remote set-url origin github_username/repo_name
+   git remote -v # confirm the changes
+   ```
+4. Run the dev server for web version of app. 
+   ```sh
+   npm run dev
+   ```
+5. Your app will run in `http://localhost:3000` or on other port if 3000 is occupied. Check the console output for detailed information about the running dev server.  
+   
+
+
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+We do not approve any code contribution to this repository. However, we welcome any feedbacks and suggestions. If you have a suggestion that would make this better, please feel free to contact us by hyeon.expression@gmail.com. Thanks.  
+
+
+
+
+<!-- LICENSE -->
+## License
+
+Distributed under the project_license. See `LICENSE.txt` for more information.  
+
+
+
+
+<!-- CONTACT -->
+## Contact
+
+EAexist: hyeon.expression@gmail.com
+
+
+Project Link: [https://github.com/EAexist/trip-todo-landing-page](https://github.com/EAexist/trip-todo-landing-page)
+
+
+
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+
+* [Chakra UI](https://github.com/infinitered/ignite)
+* [Best-README-Template](https://github.com/EAexist/Best-README-Template)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Next-url]: https://nextjs.org/
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
