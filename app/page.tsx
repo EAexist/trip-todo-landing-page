@@ -1,6 +1,8 @@
 import {
     Box,
     BoxProps,
+    Button,
+    Flex,
     Heading,
     Image,
     Stack,
@@ -25,7 +27,7 @@ export default async function Page() {
                         </Heading></Stack>}
                 body={
                     <>
-                        <Text>
+                        <Text fontSize={{ base: 'sm', md: 'md' }}>
                             여행은 가고 싶지만 준비할 게 너무 많아 걱정이라면
                             <br />
                             TRIP TODO 와 함께 간편하게 여행을 준비해보세요
@@ -34,6 +36,13 @@ export default async function Page() {
             <LandingPageSection title={<>티켓과 예약 내역이 필요할 때<br />간편하게 꺼내보기</>} body={<>인터넷 브라우저, 항공사 앱, 숙소 예약 앱, 종이 티켓에 담아다니던 예약 내역<br />이젠 한 곳에 모아 여행 중 클릭 한번으로 이용해보세요</>} image={<ImagePlaceHolder />} />
             <TicketFeatureSection />
             <LandingPageSection title={<>일일이 옮겨 적을 필요 없이<br />화면 캡쳐만으로 내 예약 관리하기</>} body={<>일일이 옮겨 적을 필요 없이 화면 캡쳐만으로 내 예약 관리하기</>} image={<ImagePlaceHolder />} />
+            <Flex hideFrom={'md'} position={'fixed'} zIndex={1000} bottom={0} left={0} width={'100%'} pr={5} pl={5} pt={5} pb={8} >
+                <Button asChild width={'100%'} py={{ base: 4 }}>
+                    <a href={'trial'}>
+                        앱 미리보기
+                    </a>
+                </Button>
+            </Flex>
         </>
     )
 }

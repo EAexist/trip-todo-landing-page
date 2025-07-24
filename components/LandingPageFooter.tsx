@@ -27,12 +27,12 @@ const SocialButton = ({
 }) => {
     return (
         <chakra.button
-            bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
+            asChild
+            bg={'#3C474C'}
             rounded={'full'}
             w={8}
             h={8}
             cursor={'pointer'}
-            asChild
             display={'inline-flex'}
             alignItems={'center'}
             justifyContent={'center'}
@@ -50,25 +50,26 @@ const SocialButton = ({
 
 const ListHeader = ({ children }: { children: ReactNode }) => {
     return (
-        <Heading as="h4" color="white">
+        <Heading as="h4" color={"neutral.footerContrastText"}>
             {children}
         </Heading>
     )
 }
 
-export default function LargeWithNewsletteLandingPageFooter() {
+export default function LandingPageFooter() {
     return (
         <Section
             as="footer"
-            bg={"neutral.black"}
-            color={"neutral.silver"}
-            px={{ base: 40, md: 40, }}
-            py={{ base: 16, md: 16, }}>
-            <Stack maxWidth={"7xl"} width={"100%"} direction={{ base: "row", md: "row", }} gap={{ base: 8, md: 120 }}>
-                <Stack gap={6}>
+            bg={"neutral.footerBg"}
+            color={"neutral.footerContrastText"}
+            px={{ base: 6, md: 40, }}
+            py={{ base: 16, }}
+            justifyContent={{ base: 'stretch', md: 'auto' }} pb={{ base: 162, md: 16 }}>
+            <Stack maxWidth={"7xl"} width={{ base: "auto", md: "100%" }} direction={{ base: "column-reverse", md: "row", }} gap={{ base: 8, md: 120 }}>
+                <Stack gap={{ base: 6 }}>
                     <Stack gap={2}>
-                        <Logo />
-                        <Text color={"neutral.silver"} fontSize={'sm'}>© 2025 EAexist.<br />All rights reserved</Text>
+                        <Logo color={"neutral.footerContrastText"} />
+                        <Text color={"neutral.footerContrastText"} fontWeight={{ base: "light", md: "regular" }} fontSize={{ base: 'xs', md: 'sm' }}>© 2025 EAexist.<br />All rights reserved</Text>
                     </Stack>
                     <Stack direction={'row'} gap={4} alignItems={"center"}>
                         <SocialButton label={'Github'} href={process.env.NEXT_PUBLIC_EAEXIST_GITHUB_URL}>
@@ -80,19 +81,19 @@ export default function LargeWithNewsletteLandingPageFooter() {
                     </Stack>
                 </Stack>
                 <Stack direction="row" gap={{ base: 0, md: 7 }} mt={{ base: 1, md: 1 }}>
-                    <Stack gap={{ base: 6, md: 6 }} minW={{ base: 0, md: 40 }}>
+                    <Stack gap={{ base: 6 }} minW={{ base: 0, md: 40 }}>
                         <ListHeader>EAexist</ListHeader>
-                        <Stack gap={{ base: 3, md: 3 }}>
+                        <Stack gap={{ base: 3 }}>
                             <Box asChild>
                                 <a href={process.env.NEXT_PUBLIC_EAEXIST_RESUME_URL}>
-                                    <Text color={"neutral.silver"} fontWeight={"regular"} fontSize={"sm"}>
+                                    <Text color={"neutral.footerContrastText"} fontWeight={{ base: "light", md: "regular" }} fontSize={{ base: "sm" }}>
                                         About Me
                                     </Text>
                                 </a>
                             </Box>
                             <Box asChild>
                                 <a href={process.env.NEXT_PUBLIC_EAEXIST_GITHUB_URL}>
-                                    <Text color={"neutral.silver"} fontWeight={"regular"} fontSize={"sm"}>
+                                    <Text color={"neutral.footerContrastText"} fontWeight={{ base: "light", md: "regular" }} fontSize={{ base: "sm" }}>
                                         Github
                                     </Text>
                                 </a>

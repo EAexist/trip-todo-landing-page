@@ -18,6 +18,7 @@ export default async function Page() {
                 align={'stretch'}
                 justifyContent={'center'}
                 py={{ base: 6, md: 6 }}
+                pt={{ base: 18, md: "84px" }}
                 gap={{ base: 12, md: 32 }}
                 direction={{ base: 'row', md: 'row' }}
             >

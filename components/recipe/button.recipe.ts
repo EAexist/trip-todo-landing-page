@@ -6,7 +6,7 @@ export const buttonRecipe = defineRecipe({
         colorPalette: "brand",
         fontWeight: 'semibold',
         width: 'fit-content',
-        borderRadius: 'xl'
+        borderRadius: '2xl'
     },
     variants: {
         size: {

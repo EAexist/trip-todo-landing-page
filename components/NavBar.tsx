@@ -17,9 +17,9 @@ export default function NavBar() {
     const { open, onToggle } = useDisclosure()
 
     return (
-        <Flex as="header" position="fixed" bg={"white"} zIndex={1000} w={"100vw"} >
+        <Flex as="header" position="fixed" zIndex={1000} w={"100vw"} bg={"rgba(255, 255, 255, 0.5)"} backdropFilter={"blur(10px)"} >
             <Flex
-                minH={'60px'}
+                h={{ base: 12, md: "60px" }}
                 align={'center'}
                 flex={1}
                 px={{ base: 2, md: 6 }}

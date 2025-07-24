@@ -41,10 +41,11 @@ export const appConfig = defineConfig({
                     // focusRing: { value: "{colors.brand.500}" },
                 },
                 neutral: {
-                    grey: { value: "#717171" },
+                    grey: { value: "rgba(0,12,30,0.8)" },
                     d_grey: { value: "#4D4D4D" },
-                    silver: { value: "#F4F7FD" },
-                    black: { value: "#263238" },
+                    silver: { value: "#f9fafb" },
+                    footerBg: { value: "#191f28" },
+                    footerContrastText: { value: "#b0b8c1" }
                 }
             },
         },

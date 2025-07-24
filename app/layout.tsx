@@ -22,9 +22,9 @@ export default function RootLayout({
             <head />
             <body>
                 <Provider>
-                    <Container px={0} py={0} >
+                    <Container px={0} py={0} maxW={'none'}>
                         <NavBar />
-                        <Box h={10} />
+                        {/* <Box h={{ base: 12, md: 15 }} /> */}
                         {children}
                         <LandingPageFooter />
                     </Container>

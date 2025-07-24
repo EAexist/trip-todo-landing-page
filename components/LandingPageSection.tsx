@@ -21,7 +21,8 @@ export const LandingPageSection = ({ title, body, image }: FeatureSectionProps) 
                 align={'center'}
                 justifyContent={'center'}
                 gap={{ base: 12, md: 12 }}
-                py={{ base: 24, md: 24 }}
+                py={{ base: 12, md: 24 }}
+                px={{ base: 6, md: 0 }}
                 direction={{ base: 'column', md: 'row' }}>
                 {image}
                 <Stack gap={{ base: 8, md: 8 }} flex={1}>
@@ -29,11 +30,11 @@ export const LandingPageSection = ({ title, body, image }: FeatureSectionProps) 
                         <Heading as="h2">
                             {title}
                         </Heading>
-                        <Text fontSize={"md"} fontWeight={"regular"} >
+                        <Text fontSize={"sm"} fontWeight={"regular"} >
                             {body}
                         </Text>
                     </Stack>
-                    <Button asChild>
+                    <Button asChild hideBelow={'md'}>
                         <a href={'trial'}>
                             앱 미리보기
                         </a>
