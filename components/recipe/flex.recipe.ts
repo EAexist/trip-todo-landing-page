@@ -1,14 +1,14 @@
-import { defineRecipe } from "@chakra-ui/react";
+import {defineRecipe} from '@chakra-ui/react'
 
 export const flexRecipe = defineRecipe({
-    base: {
-        color: "inherit",
+  base: {
+    color: 'inherit',
+  },
+  variants: {
+    as: {
+      section: {
+        width: '100%',
+      },
     },
-    variants: {
-        as: {
-            section: {
-                width: '100%',
-            },
-        },
-    },
+  },
 })

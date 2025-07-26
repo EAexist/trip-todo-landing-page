@@ -1,7 +1,7 @@
-import { defineRecipe } from "@chakra-ui/react";
+import {defineRecipe} from '@chakra-ui/react'
 
 export const cardRecipe = defineRecipe({
-    base: {
-        borderRadius: "2xl",
-    },
+  base: {
+    borderRadius: '2xl',
+  },
 })
