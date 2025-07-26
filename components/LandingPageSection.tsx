@@ -17,9 +17,9 @@ export const LandingPageSection = ({
       <Stack
         maxWidth={'7xl'}
         width={'100%'}
-        align={'center'}
+        align={{base: 'stretch', md: 'center'}}
         justifyContent={'center'}
-        gap={{base: 12, md: 12}}
+        gap={{base: 4, md: 12}}
         py={{base: 12, md: 24}}
         px={{base: 6, md: 0}}
         direction={{base: 'column', md: 'row'}}>

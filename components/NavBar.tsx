@@ -47,7 +47,7 @@ export default function NavBar() {
           justify={{base: 'center'}}>
           <LinkBox as="button">
             <LinkOverlay href={'/'}>
-              <Logo color={'gray.800'} />
+              <Logo color={'gray.800'} fontSize={'md'} />
             </LinkOverlay>
           </LinkBox>
         </Flex>

@@ -33,7 +33,60 @@ export default async function Page() {
             </Text>
           </>
         }
-        image={<ImagePlaceHolder flex={1} flexBasis={'auto'} />}
+        image={
+          <Box
+            position={'relative'}
+            // w={'100%'}
+            w={320}
+            h={440}
+            // backgroundColor={'bisque'}
+          >
+            <Image
+              position={'absolute'}
+              top={0}
+              left={0}
+              ml={-4}
+              w={280}
+              src={'/static/mockup-todolist.png'}
+            />
+            <Image
+              position={'absolute'}
+              top={150}
+              left={120}
+              w={52}
+              src={'/static/todo-flight.png'}
+              shadow={'md'}
+              borderRadius={'md'}
+            />
+            <Image
+              position={'absolute'}
+              top={200}
+              left={120}
+              w={52}
+              src={'/static/todo-museum.png'}
+              shadow={'md'}
+              borderRadius={'md'}
+            />
+            <Image
+              position={'absolute'}
+              top={250}
+              left={120}
+              w={52}
+              src={'/static/todo-currency.png'}
+              shadow={'md'}
+              borderRadius={'md'}
+            />
+            <Image
+              position={'absolute'}
+              top={300}
+              left={120}
+              w={52}
+              src={'/static/todo-roaming.png'}
+              shadow={'md'}
+              borderRadius={'md'}
+            />
+          </Box>
+        }
       />
       <FeatureSummarySection />
       <LandingPageSection
@@ -45,23 +98,72 @@ export default async function Page() {
         }
         body={
           <>
-            인터넷 브라우저, 항공사 앱, 숙소 예약 앱, 종이 티켓에 담아다니던
-            예약 내역
-            <br />
-            이젠 한 곳에 모아 여행 중 클릭 한번으로 이용해보세요
+            <Text
+              hideFrom={'md'}
+              fontSize={'inherit'}
+              fontWeight={'inherit'}
+              as={'span'}>
+              브라우저, 항공사 앱, 호텔 예약 앱, 종이 티켓에 담아다니던 예약
+              내역, 한 곳에 모아 여행 중 클릭 한번으로 꺼내보세요
+            </Text>
+            <Text
+              hideBelow={'md'}
+              fontSize={'inherit'}
+              fontWeight={'inherit'}
+              as={'span'}>
+              브라우저, 항공사 앱, 호텔 예약 앱, 종이 티켓에 담아다니던 예약
+              내역
+              <br />
+              이젠 한 곳에 모아 여행 중 클릭 한번으로 이용해보세요
+            </Text>
           </>
         }
         image={
-          <Image
-            alt={'Hero Image'}
-            fit={'cover'}
-            align={'center'}
-            w={'100%'}
-            h={'100%'}
-            src={
-              'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80'
-            }
-          />
+          <Box
+            position={'relative'}
+            // w={'100%'}
+            w={320}
+            h={440}
+            // backgroundColor={'bisque'}
+          >
+            <Box
+              position={'absolute'}
+              top={0}
+              left={0}
+              w={280}
+              shadow={'md'}
+              borderRadius={'3xl'}>
+              <Image src={'/static/reservation-main.png'} />
+              <Box
+                position={'absolute'}
+                top={0}
+                w={280}
+                h={'100%'}
+                borderRadius={'3xl'}
+                bgGradient="to-b"
+                gradientFrom="transparent"
+                gradientTo="rgba(255, 255, 255, 0.8)"
+              />
+            </Box>
+            <Image
+              position={'absolute'}
+              top={120}
+              left={180}
+              w={36}
+              src={'/static/reservation-flightTicket.png'}
+              shadow={'md'}
+              borderRadius={'3xl'}
+            />
+            <Image
+              position={'absolute'}
+              top={300}
+              left={20}
+              w={220}
+              src={'/static/reservation-qr-gray.png'}
+              shadow={'md'}
+              borderRadius={'3xl'}
+            />
+          </Box>
         }
       />
       <TicketFeatureSection />
@@ -70,11 +172,71 @@ export default async function Page() {
           <>
             일일이 옮겨 적을 필요 없이
             <br />
-            화면 캡쳐만으로 내 예약 관리하기
+            간편하게 예약 관리하기
           </>
         }
-        body={<>일일이 옮겨 적을 필요 없이 화면 캡쳐만으로 내 예약 관리하기</>}
-        image={<ImagePlaceHolder />}
+        body={
+          <>
+            <Text
+              hideFrom={'md'}
+              fontSize={'inherit'}
+              fontWeight={'inherit'}
+              as={'span'}>
+              TRIP TODO가 이미지를 읽어
+              <br />
+              내역을 자동으로 작성하고 관리해드려요
+            </Text>
+            <Text
+              hideBelow={'md'}
+              fontSize={'inherit'}
+              fontWeight={'inherit'}
+              as={'span'}>
+              TRIP TODO가 이미지를 읽어
+              <br />
+              내역을 자동으로 작성하고 관리해드려요
+            </Text>
+          </>
+        }
+        image={
+          <Box
+            position={'relative'}
+            // w={'100%'}
+            w={320}
+            h={440}
+            // backgroundColor={'bisque'}
+          >
+            <Box
+              position={'absolute'}
+              top={0}
+              left={0}
+              w={240}
+              h={360}
+              overflow={'hidden'}
+              shadow={'md'}
+              borderRadius={'3xl'}>
+              <Image src={'/static/imageAnalysis-agoda.png'} mt={-24} />
+              <Box
+                position={'absolute'}
+                top={0}
+                w={280}
+                h={'100%'}
+                borderRadius={'3xl'}
+                bgGradient="to-b"
+                gradientFrom="transparent"
+                gradientTo="rgba(255, 255, 255, 0.8)"
+              />
+            </Box>
+            <Image
+              position={'absolute'}
+              top={120}
+              left={24}
+              w={56}
+              src={'/static/imageAnalysis-result.png'}
+              shadow={'md'}
+              borderRadius={'3xl'}
+            />
+          </Box>
+        }
       />
       <Flex
         hideFrom={'md'}
