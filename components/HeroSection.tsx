@@ -11,23 +11,27 @@ export const HeroSection = ({title, body, image}: HeroSectionProps) => {
   return (
     <Section
       backgroundColor={'neutral.silver'}
-      py={{base: 0, md: 36, lg: 36}}
-      minH={{base: '100vh', md: 'auto'}}
+      //   py={{base: 0, md: 36, lg: 36}}
+      h={{base: '100vh', md: '100vh'}}
       pt={{base: '48px', md: '84px'}}
-      pb={{base: 106}}>
+      pb={{base: 106, md: 6}}
+      px={{md: 0}}
+      //   minH={{base: '100vh', md: '100vh'}}
+    >
       <Stack
         flex={1}
         maxWidth={'7xl'}
         width={'100%'}
         align={{base: 'stretch', md: 'center'}}
-        gap={{base: 0, md: 104}}
+        // gap={{base: 0, md: 104}}
         direction={{base: 'column', md: 'row'}}>
         <Stack
-          flex={{base: 'none', md: '1 0 auto'}}
+          flex={{base: 'none', md: 1}}
           width={{md: 'fit-content'}}
           gap={{base: 8, md: 8}}
           padding={6}
-          pt={{base: 10, md: 10}}>
+          pl={{md: 12}}
+          pt={{base: 10, md: 0}}>
           <Stack flex={1} gap={{base: 4, md: 4}}>
             {title}
             {body}
@@ -36,7 +40,13 @@ export const HeroSection = ({title, body, image}: HeroSectionProps) => {
             <a href={'trial'}>앱 미리보기</a>
           </Button>
         </Stack>
-        <Flex flex={1} padding={{base: 6, md: 6}} py={{base: 2, md: 6}}>
+        <Flex
+          flex={{base: 1, md: 1}}
+          padding={{base: 6, md: 6}}
+          py={{base: 2, md: 6}}
+          height={{base: 'auto', md: '100%'}}
+          alignItems={{base: 'center', md: 'center'}}
+          justifyContent={{base: 'center', md: 'center'}}>
           {image}
         </Flex>
       </Stack>

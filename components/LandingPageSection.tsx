@@ -1,4 +1,4 @@
-import {Button, Heading, Stack, Text} from '@chakra-ui/react'
+import {Button, Flex, Heading, Stack, Text} from '@chakra-ui/react'
 import {ReactNode} from 'react'
 import {Section} from './Section'
 
@@ -17,13 +17,19 @@ export const LandingPageSection = ({
       <Stack
         maxWidth={'7xl'}
         width={'100%'}
-        align={{base: 'stretch', md: 'center'}}
+        alignItems={{base: 'stretch', md: 'center'}}
         justifyContent={'center'}
         gap={{base: 4, md: 12}}
-        py={{base: 12, md: 24}}
+        py={{base: 16, md: 24}}
         px={{base: 6, md: 0}}
         direction={{base: 'column', md: 'row'}}>
-        {image}
+        <Flex
+          alignItems={'center'}
+          justifyContent={'center'}
+          minH={{base: 480, md: 480}}
+          minW={{base: 'none', md: 480}}>
+          {image}
+        </Flex>
         <Stack gap={{base: 8, md: 8}} flex={1}>
           <Stack gap={{base: 4, md: 4}}>
             <Heading as="h2">{title}</Heading>

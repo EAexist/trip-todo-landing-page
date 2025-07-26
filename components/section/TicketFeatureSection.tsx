@@ -61,7 +61,7 @@ export const TicketFeatureSection = () => {
     <Section backgroundColor={'neutral.silver'}>
       <Stack
         align={{base: 'stretch', md: 'center'}}
-        py={{base: 12, md: 16}}
+        py={{base: 16, md: 16}}
         px={{base: 6, md: 0}}
         gap={{base: 8, md: 0}}
         direction={{base: 'column', md: 'row'}}
@@ -83,7 +83,7 @@ export const TicketFeatureSection = () => {
               </Box>
               <VStack align={'start'} gap={{base: 0, md: 'auto'}}>
                 <Heading as="h4">{item.title}</Heading>
-                <Text fontSize={'sm'} fontWeight={'regular'}>
+                <Text fontSize={{base: 'xs', md: 'sm'}} fontWeight={'regular'}>
                   {item.body}
                 </Text>
               </VStack>

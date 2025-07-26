@@ -1,3 +1,7 @@
+import {HeroSection} from '@/components/HeroSection'
+import {LandingPageSection} from '@/components/LandingPageSection'
+import FeatureSummarySection from '@/components/section/FeatureSummarySection'
+import {TicketFeatureSection} from '@/components/section/TicketFeatureSection'
 import {
   Box,
   BoxProps,
@@ -7,11 +11,8 @@ import {
   Image,
   Stack,
   Text,
+  VStack,
 } from '@chakra-ui/react'
-import {HeroSection} from '@/components/HeroSection'
-import {LandingPageSection} from '@/components/LandingPageSection'
-import FeatureSummarySection from '@/components/section/FeatureSummarySection'
-import {TicketFeatureSection} from '@/components/section/TicketFeatureSection'
 export default async function Page() {
   return (
     <>
@@ -36,55 +37,58 @@ export default async function Page() {
         image={
           <Box
             position={'relative'}
-            // w={'100%'}
-            w={320}
-            h={440}
-            // backgroundColor={'bisque'}
-          >
-            <Image
-              position={'absolute'}
-              top={0}
-              left={0}
+            w={'100%'}
+            // h={'100%'}
+            aspectRatio={1 / 1.5}
+            minW={{base: 320, md: 420}}
+            minH={440}
+            maxW={480}
+            maxH={580}
+            flex={1}
+            bgImage={'url("/static/mockup-todolist.png")'}
+            bgSize={'contain'}
+            bgRepeat={'no-repeat'}
+            backgroundPositionX={-12}>
+            {/* <Image
+              flex={1}
+              //   position={'absolute'}
+              //   top={0}
+              //   left={0}
               ml={-4}
-              w={280}
+              //   w={280}
+              w={'100%'}
+              h={'100%'}
+              //   maxH={'100%'}
+              fit={'contain'}
               src={'/static/mockup-todolist.png'}
-            />
-            <Image
+            /> */}
+            <VStack
               position={'absolute'}
-              top={150}
-              left={120}
-              w={52}
-              src={'/static/todo-flight.png'}
-              shadow={'md'}
-              borderRadius={'md'}
-            />
-            <Image
-              position={'absolute'}
-              top={200}
-              left={120}
-              w={52}
-              src={'/static/todo-museum.png'}
-              shadow={'md'}
-              borderRadius={'md'}
-            />
-            <Image
-              position={'absolute'}
-              top={250}
-              left={120}
-              w={52}
-              src={'/static/todo-currency.png'}
-              shadow={'md'}
-              borderRadius={'md'}
-            />
-            <Image
-              position={'absolute'}
-              top={300}
-              left={120}
-              w={52}
-              src={'/static/todo-roaming.png'}
-              shadow={'md'}
-              borderRadius={'md'}
-            />
+              top={'35%'}
+              right={4}
+              w={{base: 52, md: 60}}
+              gap={4}>
+              <Image
+                src={'/static/todo-flight.png'}
+                shadow={'md'}
+                borderRadius={'md'}
+              />
+              <Image
+                src={'/static/todo-museum.png'}
+                shadow={'md'}
+                borderRadius={'md'}
+              />
+              <Image
+                src={'/static/todo-currency.png'}
+                shadow={'md'}
+                borderRadius={'md'}
+              />
+              <Image
+                src={'/static/todo-roaming.png'}
+                shadow={'md'}
+                borderRadius={'md'}
+              />
+            </VStack>
           </Box>
         }
       />
@@ -182,8 +186,9 @@ export default async function Page() {
               fontSize={'inherit'}
               fontWeight={'inherit'}
               as={'span'}>
-              TRIP TODO가 이미지를 읽어
+              화면 캡쳐 한번이면 끝!
               <br />
+              TRIP TODO가 화면을 읽어 <br />
               내역을 자동으로 작성하고 관리해드려요
             </Text>
             <Text
@@ -191,9 +196,9 @@ export default async function Page() {
               fontSize={'inherit'}
               fontWeight={'inherit'}
               as={'span'}>
-              TRIP TODO가 이미지를 읽어
+              화면 캡쳐 한번이면 끝!
               <br />
-              내역을 자동으로 작성하고 관리해드려요
+              TRIP TODO가 화면을 읽어 내역을 자동으로 작성하고 관리해드려요
             </Text>
           </>
         }

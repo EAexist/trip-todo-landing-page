@@ -15,7 +15,7 @@ function FeatureCard(props: FeatureCardProps) {
   const {title, body} = props
   return (
     <Card.Root
-      w={{base: '100%', md: 56, lg: 72}}
+      w={{base: 56, md: 72, lg: 72}}
       maxW={{base: 320}}
       variant="elevated"
       key={title}>
@@ -52,7 +52,7 @@ function FeatureCard(props: FeatureCardProps) {
           </Heading>
         </Card.Title>
         <Card.Description
-          fontSize={'sm'}
+          fontSize={{base: 'xs', md: 'sm'}}
           fontWeight={'regular'}
           textAlign={'center'}>
           {body}
