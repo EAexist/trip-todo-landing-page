@@ -39,13 +39,16 @@ export default async function Page() {
             position={'relative'}
             w={'100%'}
             // h={'100%'}
-            aspectRatio={1 / 1.5}
+            // aspectRatio={1 / 1.5}
             minW={{base: 320, md: 420}}
             minH={440}
             maxW={480}
             maxH={580}
-            flex={1}>
-            <Image
+            flex={1}
+            bgImg={"url('/static/mockup-todolist.png')"}
+            bgSize={'contain'}
+            bgRepeat={'no-repeat'}>
+            {/* <Image
               alt={'TRIP TODO 앱 메인 화면'}
               flex={1}
               w={'100%'}
@@ -54,7 +57,7 @@ export default async function Page() {
               fit={'contain'}
               src={'/static/mockup-todolist.png'}
               fetchPriority="high"
-            />
+            /> */}
             <VStack
               position={'absolute'}
               top={'35%'}
@@ -66,28 +69,24 @@ export default async function Page() {
                 src={'/static/todo-flight.png'}
                 shadow={'md'}
                 borderRadius={'md'}
-                fetchPriority="low"
               />
               <Image
                 alt={'할 일 항목: 미술관 입장권 예약 '}
                 src={'/static/todo-museum.png'}
                 shadow={'md'}
                 borderRadius={'md'}
-                fetchPriority="low"
               />
               <Image
                 alt={'할 일 항목: 환전 '}
                 src={'/static/todo-currency.png'}
                 shadow={'md'}
                 borderRadius={'md'}
-                fetchPriority="low"
               />
               <Image
                 alt={'할 일 항목: 데이터 로밍 '}
                 src={'/static/todo-roaming.png'}
                 shadow={'md'}
                 borderRadius={'md'}
-                fetchPriority="low"
               />
             </VStack>
           </Box>

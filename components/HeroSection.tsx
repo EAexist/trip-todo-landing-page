@@ -23,14 +23,15 @@ export const HeroSection = ({title, body, image}: HeroSectionProps) => {
         maxWidth={'7xl'}
         width={'100%'}
         align={{base: 'stretch', md: 'center'}}
-        // gap={{base: 0, md: 104}}
+        gap={{base: 0}}
         direction={{base: 'column', md: 'row'}}>
         <Stack
           flex={{base: 'none', md: 1}}
           width={{md: 'fit-content'}}
           gap={{base: 8, md: 8}}
-          padding={6}
+          padding={{base: 6, md: 6}}
           pl={{md: 12}}
+          pr={{md: 0}}
           pt={{base: 10, md: 0}}>
           <Stack flex={1} gap={{base: 4, md: 4}}>
             {title}
@@ -44,7 +45,7 @@ export const HeroSection = ({title, body, image}: HeroSectionProps) => {
           flex={{base: 1, md: 1}}
           padding={{base: 6, md: 6}}
           py={{base: 2, md: 6}}
-          height={{base: 'auto', md: '100%'}}
+          //   height={{base: 'auto', md: '100%'}}
           alignItems={{base: 'center', md: 'center'}}
           justifyContent={{base: 'center', md: 'center'}}>
           {image}

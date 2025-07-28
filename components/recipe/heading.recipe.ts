@@ -3,13 +3,14 @@ import {defineRecipe} from '@chakra-ui/react'
 export const headingRecipe = defineRecipe({
   base: {
     color: 'neutral.d_grey',
+    wordBreak: 'keep-all',
   },
   variants: {
     as: {
       h1: {
         as: 'h1',
         fontWeight: {base: 'bold', md: 'bold'},
-        fontSize: {base: 36, md: 64},
+        fontSize: {base: 36, md: 48, lg: 64},
         lineHeight: 1,
         letterSpacing: -0.5,
       },
