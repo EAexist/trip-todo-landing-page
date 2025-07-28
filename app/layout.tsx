@@ -11,7 +11,10 @@ const pretendardVariable = localFont({
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
-    <html className={pretendardVariable.className} suppressHydrationWarning>
+    <html
+      lang="ko"
+      className={pretendardVariable.className}
+      suppressHydrationWarning>
       <head />
       <body>
         <Provider>
