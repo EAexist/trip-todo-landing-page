@@ -46,6 +46,7 @@ export default async function Page() {
             maxH={580}
             flex={1}>
             <Image
+              alt={'TRIP TODO 앱 메인 화면'}
               flex={1}
               w={'100%'}
               h={'100%'}
@@ -61,21 +62,25 @@ export default async function Page() {
               w={{base: 52, md: 60}}
               gap={4}>
               <Image
+                alt={'할 일 항목: 항공권 예약 '}
                 src={'/static/todo-flight.png'}
                 shadow={'md'}
                 borderRadius={'md'}
               />
               <Image
+                alt={'할 일 항목: 미술관 입장권 예약 '}
                 src={'/static/todo-museum.png'}
                 shadow={'md'}
                 borderRadius={'md'}
               />
               <Image
+                alt={'할 일 항목: 환전 '}
                 src={'/static/todo-currency.png'}
                 shadow={'md'}
                 borderRadius={'md'}
               />
               <Image
+                alt={'할 일 항목: 데이터 로밍 '}
                 src={'/static/todo-roaming.png'}
                 shadow={'md'}
                 borderRadius={'md'}
@@ -129,7 +134,10 @@ export default async function Page() {
               w={280}
               shadow={'md'}
               borderRadius={'3xl'}>
-              <Image src={'/static/reservation-main.png'} />
+              <Image
+                alt={'TRIP TODO 예약 목록 화면'}
+                src={'/static/reservation-main.png'}
+              />
               <Box
                 position={'absolute'}
                 top={0}
@@ -142,6 +150,7 @@ export default async function Page() {
               />
             </Box>
             <Image
+              alt={'항공사 모바일 탑승권'}
               position={'absolute'}
               top={120}
               left={180}
@@ -151,7 +160,7 @@ export default async function Page() {
               borderRadius={'3xl'}
             />
             <Image
-              position={'absolute'}
+              position={'Visit Japan'}
               top={300}
               left={20}
               w={220}
@@ -211,7 +220,11 @@ export default async function Page() {
               overflow={'hidden'}
               shadow={'md'}
               borderRadius={'3xl'}>
-              <Image src={'/static/imageAnalysis-agoda.png'} mt={-24} />
+              <Image
+                alt={'아고다 숙소 예약 화면 캡쳐'}
+                src={'/static/imageAnalysis-agoda.png'}
+                mt={-24}
+              />
               <Box
                 position={'absolute'}
                 top={0}
@@ -224,6 +237,7 @@ export default async function Page() {
               />
             </Box>
             <Image
+              alt={'TRIP TODO 숙소 예약 내역'}
               position={'absolute'}
               top={120}
               left={24}
@@ -253,25 +267,3 @@ export default async function Page() {
     </>
   )
 }
-
-const ImagePlaceHolder = (props: BoxProps) => (
-  <Box
-    position={'relative'}
-    aspectRatio={1}
-    rounded={'2xl'}
-    boxShadow={'2xl'}
-    width={300}
-    overflow={'hidden'}
-    {...props}>
-    <Image
-      alt={'Hero Image'}
-      fit={'cover'}
-      align={'center'}
-      w={'100%'}
-      h={'100%'}
-      src={
-        'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80'
-      }
-    />
-  </Box>
-)
