@@ -44,24 +44,16 @@ export default async function Page() {
             minH={440}
             maxW={480}
             maxH={580}
-            flex={1}
-            bgImage={'url("/static/mockup-todolist.png")'}
-            bgSize={'contain'}
-            bgRepeat={'no-repeat'}
-            backgroundPositionX={-12}>
-            {/* <Image
+            flex={1}>
+            <Image
               flex={1}
-              //   position={'absolute'}
-              //   top={0}
-              //   left={0}
-              ml={-4}
-              //   w={280}
               w={'100%'}
               h={'100%'}
-              //   maxH={'100%'}
+              ml={-3}
               fit={'contain'}
               src={'/static/mockup-todolist.png'}
-            /> */}
+              fetchPriority="high"
+            />
             <VStack
               position={'absolute'}
               top={'35%'}
