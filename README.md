@@ -52,7 +52,9 @@
 * [![React][React.js]][React-url]
 * [![Next.js][Next.js]][Next-url]
   
+### Demo
 
+https://trip-todo-landing-page.vercel.app
 
 <!-- GETTING STARTED -->
 ## Getting Started
