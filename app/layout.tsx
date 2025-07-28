@@ -15,7 +15,15 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
       lang="ko"
       className={pretendardVariable.className}
       suppressHydrationWarning>
-      <head />
+      <head>
+        <link
+          rel="preload"
+          href="/static/mockup-todolist.png"
+          as="image"
+          type="image/png"
+          fetchPriority="high"
+        />
+      </head>
       <body>
         <Provider>
           <Container px={0} py={0} maxW={'none'}>

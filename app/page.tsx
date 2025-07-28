@@ -4,7 +4,6 @@ import FeatureSummarySection from '@/components/section/FeatureSummarySection'
 import {TicketFeatureSection} from '@/components/section/TicketFeatureSection'
 import {
   Box,
-  BoxProps,
   Button,
   Flex,
   Heading,
@@ -13,13 +12,24 @@ import {
   Text,
   VStack,
 } from '@chakra-ui/react'
+import type {Metadata, Viewport} from 'next'
+
+export const metadata: Metadata = {
+  title: 'Trip Todo',
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
+
 export default async function Page() {
   return (
     <>
       <HeroSection
         title={
           <Stack>
-            <Heading as={'h1'}>즐거운 여행을 위한</Heading>
+            <Heading as={'h1'}>즐거운 여행,</Heading>
             <Heading as={'h1'} color={'brand.solid'}>
               TRIP TODO
             </Heading>
@@ -38,14 +48,14 @@ export default async function Page() {
           <Box
             position={'relative'}
             w={'100%'}
-            // h={'100%'}
+            h={'100%'}
             // aspectRatio={1 / 1.5}
             minW={{base: 320, md: 420}}
             minH={440}
             maxW={480}
             maxH={580}
             flex={1}
-            bgImg={"url('/static/mockup-todolist.png')"}
+            bgImg={'url(/static/mockup-todolist.png)'}
             bgSize={'contain'}
             bgRepeat={'no-repeat'}>
             {/* <Image
