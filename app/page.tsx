@@ -66,24 +66,28 @@ export default async function Page() {
                 src={'/static/todo-flight.png'}
                 shadow={'md'}
                 borderRadius={'md'}
+                fetchPriority="low"
               />
               <Image
                 alt={'할 일 항목: 미술관 입장권 예약 '}
                 src={'/static/todo-museum.png'}
                 shadow={'md'}
                 borderRadius={'md'}
+                fetchPriority="low"
               />
               <Image
                 alt={'할 일 항목: 환전 '}
                 src={'/static/todo-currency.png'}
                 shadow={'md'}
                 borderRadius={'md'}
+                fetchPriority="low"
               />
               <Image
                 alt={'할 일 항목: 데이터 로밍 '}
                 src={'/static/todo-roaming.png'}
                 shadow={'md'}
                 borderRadius={'md'}
+                fetchPriority="low"
               />
             </VStack>
           </Box>
@@ -135,6 +139,7 @@ export default async function Page() {
               shadow={'md'}
               borderRadius={'3xl'}>
               <Image
+                loading="lazy"
                 alt={'TRIP TODO 예약 목록 화면'}
                 src={'/static/reservation-main.png'}
               />
@@ -150,6 +155,7 @@ export default async function Page() {
               />
             </Box>
             <Image
+              loading="lazy"
               alt={'항공사 모바일 탑승권'}
               position={'absolute'}
               top={120}
@@ -160,7 +166,9 @@ export default async function Page() {
               borderRadius={'3xl'}
             />
             <Image
-              position={'Visit Japan'}
+              loading="lazy"
+              alt={'Visit Japan'}
+              position={'absolute'}
               top={300}
               left={20}
               w={220}
@@ -221,6 +229,7 @@ export default async function Page() {
               shadow={'md'}
               borderRadius={'3xl'}>
               <Image
+                loading="lazy"
                 alt={'아고다 숙소 예약 화면 캡쳐'}
                 src={'/static/imageAnalysis-agoda.png'}
                 mt={-24}
@@ -237,6 +246,7 @@ export default async function Page() {
               />
             </Box>
             <Image
+              loading="lazy"
               alt={'TRIP TODO 숙소 예약 내역'}
               position={'absolute'}
               top={120}

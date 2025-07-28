@@ -4,6 +4,7 @@ export const Logo = (props?: TextProps) => {
   return (
     <Stack direction="row" align="center" as="span">
       <Image
+        fetchPriority="low"
         src="/static/app/logo.png"
         alt="trip todo app logo"
         width={8}
