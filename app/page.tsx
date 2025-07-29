@@ -75,24 +75,32 @@ export default async function Page() {
               w={{base: 52, md: 60}}
               gap={4}>
               <Image
+                loading="lazy"
+                fetchPriority="low"
                 alt={'할 일 항목: 항공권 예약 '}
                 src={'/static/todo-flight.png'}
                 shadow={'md'}
                 borderRadius={'md'}
               />
               <Image
+                loading="lazy"
+                fetchPriority="low"
                 alt={'할 일 항목: 미술관 입장권 예약 '}
                 src={'/static/todo-museum.png'}
                 shadow={'md'}
                 borderRadius={'md'}
               />
               <Image
+                loading="lazy"
+                fetchPriority="low"
                 alt={'할 일 항목: 환전 '}
                 src={'/static/todo-currency.png'}
                 shadow={'md'}
                 borderRadius={'md'}
               />
               <Image
+                loading="lazy"
+                fetchPriority="low"
                 alt={'할 일 항목: 데이터 로밍 '}
                 src={'/static/todo-roaming.png'}
                 shadow={'md'}

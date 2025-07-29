@@ -7,8 +7,23 @@ import Provider from './provider'
 // const pretendardVariable = localFont({
 //   src: './font/PretendardVariable.woff2',
 //   variable: '--font-pretendard-variable',
+//   fallback: [
+//     '-apple-system',
+//     'BlinkMacSystemFont',
+//     'system-ui',
+//     'Roboto',
+//     'Helvetica Neue',
+//     'Segoe UI',
+//     'Apple SD Gothic Neo',
+//     'Noto Sans KR',
+//     'Malgun Gothic',
+//     'Apple Color Emoji',
+//     'Segoe UI Emoji',
+//     'Segoe UI Symbol',
+//     'sans-serif',
+//   ],
+//   display: 'fallback',
 // })
-
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html
@@ -17,10 +32,17 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
       suppressHydrationWarning>
       <head>
         <link
-          rel="stylesheet"
+          rel="preconnect"
+          href="https://cdn.jsdelivr.net"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
           as="style"
           crossOrigin="anonymous"
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+          media="print"
+          id="font-pretendard-variable"
         />
         <link
           rel="preload"
@@ -31,6 +53,12 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
         />
       </head>
       <body>
+        {' '}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `document.getElementById("font-pretendard-variable").rel="stylesheet";`,
+          }}
+        />
         <Provider>
           <Container px={0} py={0} maxW={'none'}>
             <NavBar />
