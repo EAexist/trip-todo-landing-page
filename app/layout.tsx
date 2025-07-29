@@ -4,18 +4,24 @@ import {Box, Container} from '@chakra-ui/react'
 import localFont from 'next/font/local'
 import Provider from './provider'
 
-const pretendardVariable = localFont({
-  src: './font/PretendardVariable.woff2',
-  variable: '--font-pretendard-variable',
-})
+// const pretendardVariable = localFont({
+//   src: './font/PretendardVariable.woff2',
+//   variable: '--font-pretendard-variable',
+// })
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html
       lang="ko"
-      className={pretendardVariable.className}
+      //   className={pretendardVariable.className}
       suppressHydrationWarning>
       <head>
+        <link
+          rel="stylesheet"
+          as="style"
+          crossOrigin="anonymous"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+        />
         <link
           rel="preload"
           href="/static/mockup-todolist.png"
