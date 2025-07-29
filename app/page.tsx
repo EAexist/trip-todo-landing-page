@@ -55,7 +55,8 @@ export default async function Page() {
             maxW={480}
             maxH={580}
             flex={1}
-            bgImg={'url(/static/mockup-todolist.png)'}
+            // bgImg={'url(/static/mockup-todolist.png)'}
+            bgImg={'url(/static/mockup-todolist.webp)'}
             bgSize={'contain'}
             bgRepeat={'no-repeat'}>
             {/* <Image

@@ -46,11 +46,18 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
         />
         <link
           rel="preload"
+          href="/static/mockup-todolist.webp"
+          as="image"
+          type="image/webp"
+          fetchPriority="high"
+        />
+        {/* <link
+          rel="preload"
           href="/static/mockup-todolist.png"
           as="image"
           type="image/png"
           fetchPriority="high"
-        />
+        /> */}
       </head>
       <body>
         {' '}
