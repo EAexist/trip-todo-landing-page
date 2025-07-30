@@ -1,8 +1,11 @@
 import LandingPageFooter from '@/components/LandingPageFooter'
-import NavBar from '@/components/NavBar'
+// import NavBar from '@/components/NavBar'
 import {Box, Container} from '@chakra-ui/react'
 import localFont from 'next/font/local'
 import Provider from './provider'
+import dynamic from 'next/dynamic'
+
+const NavBar = dynamic(() => import('@/components/NavBar'))
 
 // const pretendardVariable = localFont({
 //   src: './font/PretendardVariable.woff2',
@@ -41,7 +44,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
           as="style"
           crossOrigin="anonymous"
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
-          media="print"
+          //   media="print"
           id="font-pretendard-variable"
         />
         <link
@@ -60,7 +63,6 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
         /> */}
       </head>
       <body>
-        {' '}
         <script
           dangerouslySetInnerHTML={{
             __html: `document.getElementById("font-pretendard-variable").rel="stylesheet";`,

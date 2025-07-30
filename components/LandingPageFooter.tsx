@@ -1,7 +1,8 @@
-'use client'
+// 'use client'
 
 import {
   Box,
+  Button,
   chakra,
   Heading,
   Stack,
@@ -12,7 +13,7 @@ import {ReactNode} from 'react'
 import {FaGithub} from 'react-icons/fa'
 import {Logo} from './Logo'
 import {Section} from './Section'
-import {useColorModeValue} from './ui/color-mode'
+// import {useColorModeValue} from './ui/color-mode'
 import {SiNotion} from 'react-icons/si'
 
 const SocialButton = ({
@@ -25,7 +26,7 @@ const SocialButton = ({
   href?: string
 }) => {
   return (
-    <chakra.button
+    <Button
       asChild
       bg={'#3C474C'}
       rounded={'full'}
@@ -37,13 +38,14 @@ const SocialButton = ({
       justifyContent={'center'}
       transition={'background 0.3s ease'}
       _hover={{
-        bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
+        // bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
+        bg: 'blackAlpha.200',
       }}>
       <a href={href}>
         <VisuallyHidden>{label}</VisuallyHidden>
         {children}
       </a>
-    </chakra.button>
+    </Button>
   )
 }
 

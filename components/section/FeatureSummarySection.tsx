@@ -1,4 +1,4 @@
-'use client'
+// 'use client'
 
 import {Box, Card, Flex, Heading, Stack, Text} from '@chakra-ui/react'
 import {Earth, LucideProps, Luggage, Ticket} from 'lucide-react'

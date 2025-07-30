@@ -1,4 +1,4 @@
-'use client'
+// 'use client'
 
 import {
   Box,
@@ -7,24 +7,20 @@ import {
   SimpleGrid,
   Stack,
   Text,
-  useBreakpoint,
-  useBreakpointValue,
   VStack,
 } from '@chakra-ui/react'
-import {
-  BedDouble,
-  FilePenLine,
-  LucideProps,
-  Ticket,
-  TicketsPlane,
-} from 'lucide-react'
-import {FC} from 'react'
-import {Section} from '../Section'
+import {IconName} from 'lucide-react/dynamic'
+// import {Icon} from '../Icon'
+import {Section} from '@/components/Section'
+import dynamic from 'next/dynamic'
+
+const Icon = dynamic(() => import('@/components/Icon').then(mod => mod.Icon))
 
 export interface FeatureItem {
   title: string
   body: string
-  icon: FC<LucideProps>
+  icon: IconName
+  //   icon: FC<LucideProps>
 }
 
 export const TicketFeatureSection = () => {
@@ -32,30 +28,28 @@ export const TicketFeatureSection = () => {
     {
       title: '모바일 탑승권',
       body: 'Flight Mobile Ticket',
-      // icon: <TicketsPlane />,
-      icon: TicketsPlane,
+      icon: 'tickets-plane',
+      //   icon: TicketsPlane,
     },
     {
       title: '숙소 예약',
       body: 'Accomodation',
-      // icon: <BedDouble />,
-      icon: BedDouble,
+      icon: 'bed-double',
+      //   icon: BedDouble,
     },
     {
       title: '사전 입국심사',
       body: 'Immigration',
-      // icon: <FilePenLine />,
-      icon: FilePenLine,
+      icon: 'file-pen-line',
+      //   icon: FilePenLine,
     },
     {
       title: '입장권',
       body: 'Other Tickets',
-      // icon: <Ticket />,
-      icon: Ticket,
+      icon: 'ticket',
+      //   icon: Ticket,
     },
   ]
-
-  const iconSize = useBreakpointValue({base: 32, md: 48})
 
   return (
     <Section backgroundColor={'neutral.silver'}>
@@ -79,7 +73,8 @@ export const TicketFeatureSection = () => {
           {RESERVATION_FEATURE_ITEMS.map(item => (
             <HStack key={item.title} align={'center'}>
               <Box color={'green.400'} px={2}>
-                {<item.icon size={iconSize} color={'#006FFD'} />}
+                {/* {<item.icon color={'#006FFD'} fontSize={12} />} */}
+                {<Icon name={item.icon} color={'#006FFD'} />}
               </Box>
               <VStack align={'start'} gap={{base: 0, md: 'auto'}}>
                 <Heading as="h4">{item.title}</Heading>

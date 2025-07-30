@@ -9,8 +9,16 @@ export const appConfig = defineConfig({
   theme: {
     tokens: {
       fonts: {
-        heading: {value: 'var(--font-pretendard-variable)'},
-        body: {value: 'var(--font-pretendard-variable)'},
+        // heading: {value: 'var(--font-pretendard-variable)'},
+        // body: {value: 'var(--font-pretendard-variable)'},
+        heading: {
+          value:
+            'Pretendard Variable, Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, Helvetica Neue, Segoe UI, Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif',
+        },
+        body: {
+          value:
+            'Pretendard Variable, Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, Helvetica Neue, Segoe UI, Apple SD Gothic Neo, Noto Sans KR, Malgun Gothic, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, sans-serif',
+        },
         // mono: { value: "var(--font-pretendard-variable)" },
       },
       colors: {
