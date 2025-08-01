@@ -1,4 +1,4 @@
-'use client'
+//'use client'
 
 import {Image, ImageProps, Stack, Text, TextProps} from '@chakra-ui/react'
 import {useEffect, useState} from 'react'

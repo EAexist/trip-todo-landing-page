@@ -1,4 +1,4 @@
-'use client'
+//'use client'
 
 import {system} from '@/theme/theme'
 import {ChakraProvider} from '@chakra-ui/react'

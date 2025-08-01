@@ -1,4 +1,4 @@
-'use client'
+//'use client'
 
 import {useBreakpointValue} from '@chakra-ui/react'
 import {LucideProps} from 'lucide-react'

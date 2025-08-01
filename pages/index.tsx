@@ -1,7 +1,7 @@
 import {HeroSection} from '@/components/HeroSection'
 import {LandingPageSection} from '@/components/LandingPageSection'
 import {LazyImage} from '@/components/LazyImage'
-import FeatureSummarySection from '@/components/section/FeatureSummarySection'
+import {FeatureSummarySection} from '@/components/section/FeatureSummarySection'
 import {TicketFeatureSection} from '@/components/section/TicketFeatureSection'
 import {
   Box,
@@ -16,15 +16,6 @@ import {
 import type {Metadata, Viewport} from 'next'
 import dynamic from 'next/dynamic'
 
-export const metadata: Metadata = {
-  title: 'Trip Todo',
-}
-
-export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
-}
-
 // const Box = dynamic(() => import('@chakra-ui/react').then(mod => mod.Box))
 // const Button = dynamic(() => import('@chakra-ui/react').then(mod => mod.Button))
 // const Flex = dynamic(() => import('@chakra-ui/react').then(mod => mod.Flex))
@@ -34,7 +25,7 @@ export const viewport: Viewport = {
 // const Text = dynamic(() => import('@chakra-ui/react').then(mod => mod.Text))
 // const VStack = dynamic(() => import('@chakra-ui/react').then(mod => mod.VStack))
 
-export default async function Page() {
+export default function Page() {
   return (
     <>
       <HeroSection
@@ -70,16 +61,6 @@ export default async function Page() {
             bgImg={'url(/static/mockup-todolist.webp)'}
             bgSize={'contain'}
             bgRepeat={'no-repeat'}>
-            {/* <Image
-              alt={'TRIP TODO 앱 메인 화면'}
-              flex={1}
-              w={'100%'}
-              h={'100%'}
-              ml={-3}
-              fit={'contain'}
-              src={'/static/mockup-todolist.png'}
-              fetchPriority="high"
-            /> */}
             <VStack
               position={'absolute'}
               top={'35%'}

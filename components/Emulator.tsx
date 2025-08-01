@@ -1,4 +1,4 @@
-'use client'
+//'use client'
 
 import {Flex} from '@chakra-ui/react'
 import {useEffect, useRef, useState} from 'react'

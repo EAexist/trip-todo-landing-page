@@ -4,9 +4,19 @@ import {Box, Container} from '@chakra-ui/react'
 import localFont from 'next/font/local'
 // import Provider from './provider'
 import dynamic from 'next/dynamic'
+import {Metadata, Viewport} from 'next'
 
 const NavBar = dynamic(() => import('@/components/NavBar'))
 const Provider = dynamic(() => import('./provider'))
+
+export const metadata: Metadata = {
+  title: 'Trip Todo',
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
 
 // const pretendardVariable = localFont({
 //   src: './font/PretendardVariable.woff2',

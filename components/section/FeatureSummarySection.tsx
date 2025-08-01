@@ -1,4 +1,4 @@
-// 'use client'
+// //'use client'
 
 import {Box, Card, Flex, Heading, Stack, Text} from '@chakra-ui/react'
 import {Earth, LucideProps, Luggage, Ticket} from 'lucide-react'
@@ -62,7 +62,7 @@ function FeatureCard(props: FeatureCardProps) {
   )
 }
 
-export default function FeatureSummarySection() {
+export function FeatureSummarySection() {
   const TODOLIST_FEATURE_ITEMS: FeatureCardProps[] = [
     {
       title: '숙소, 항공권 예약',
