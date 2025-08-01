@@ -2,10 +2,11 @@ import LandingPageFooter from '@/components/LandingPageFooter'
 // import NavBar from '@/components/NavBar'
 import {Box, Container} from '@chakra-ui/react'
 import localFont from 'next/font/local'
-import Provider from './provider'
+// import Provider from './provider'
 import dynamic from 'next/dynamic'
 
 const NavBar = dynamic(() => import('@/components/NavBar'))
+const Provider = dynamic(() => import('./provider'))
 
 // const pretendardVariable = localFont({
 //   src: './font/PretendardVariable.woff2',
@@ -35,32 +36,26 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
       suppressHydrationWarning>
       <head>
         <link
+          rel="preload"
+          fetchPriority="high"
+          as="image"
+          type="image/webp"
+          href="/static/mockup-todolist.webp"
+        />
+        {/* <link
           rel="preconnect"
           href="https://cdn.jsdelivr.net"
           crossOrigin="anonymous"
-        />
+        /> */}
         <link
           rel="preload"
+          fetchPriority="low"
           as="style"
           crossOrigin="anonymous"
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
           //   media="print"
           id="font-pretendard-variable"
         />
-        <link
-          rel="preload"
-          href="/static/mockup-todolist.webp"
-          as="image"
-          type="image/webp"
-          fetchPriority="high"
-        />
-        {/* <link
-          rel="preload"
-          href="/static/mockup-todolist.png"
-          as="image"
-          type="image/png"
-          fetchPriority="high"
-        /> */}
       </head>
       <body>
         <script

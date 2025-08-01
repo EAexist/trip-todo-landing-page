@@ -1,5 +1,6 @@
 import {HeroSection} from '@/components/HeroSection'
 import {LandingPageSection} from '@/components/LandingPageSection'
+import {LazyImage} from '@/components/LazyImage'
 import FeatureSummarySection from '@/components/section/FeatureSummarySection'
 import {TicketFeatureSection} from '@/components/section/TicketFeatureSection'
 import {
@@ -13,6 +14,7 @@ import {
   VStack,
 } from '@chakra-ui/react'
 import type {Metadata, Viewport} from 'next'
+import dynamic from 'next/dynamic'
 
 export const metadata: Metadata = {
   title: 'Trip Todo',
@@ -22,6 +24,15 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
 }
+
+// const Box = dynamic(() => import('@chakra-ui/react').then(mod => mod.Box))
+// const Button = dynamic(() => import('@chakra-ui/react').then(mod => mod.Button))
+// const Flex = dynamic(() => import('@chakra-ui/react').then(mod => mod.Flex))
+// const Heading = dynamic(() => import('@chakra-ui/react').then(mod => mod.Heading))
+// const Image = dynamic(() => import('@chakra-ui/react').then(mod => mod.Image))
+// const Stack = dynamic(() => import('@chakra-ui/react').then(mod => mod.Stack))
+// const Text = dynamic(() => import('@chakra-ui/react').then(mod => mod.Text))
+// const VStack = dynamic(() => import('@chakra-ui/react').then(mod => mod.VStack))
 
 export default async function Page() {
   return (
@@ -75,32 +86,28 @@ export default async function Page() {
               right={4}
               w={{base: 52, md: 60}}
               gap={4}>
-              <Image
-                loading="lazy"
+              <LazyImage
                 fetchPriority="low"
                 alt={'할 일 항목: 항공권 예약 '}
                 src={'/static/todo-flight.png'}
                 shadow={'md'}
                 borderRadius={'md'}
               />
-              <Image
-                loading="lazy"
+              <LazyImage
                 fetchPriority="low"
                 alt={'할 일 항목: 미술관 입장권 예약 '}
                 src={'/static/todo-museum.png'}
                 shadow={'md'}
                 borderRadius={'md'}
               />
-              <Image
-                loading="lazy"
+              <LazyImage
                 fetchPriority="low"
                 alt={'할 일 항목: 환전 '}
                 src={'/static/todo-currency.png'}
                 shadow={'md'}
                 borderRadius={'md'}
               />
-              <Image
-                loading="lazy"
+              <LazyImage
                 fetchPriority="low"
                 alt={'할 일 항목: 데이터 로밍 '}
                 src={'/static/todo-roaming.png'}
@@ -156,8 +163,7 @@ export default async function Page() {
               w={280}
               shadow={'md'}
               borderRadius={'3xl'}>
-              <Image
-                loading="lazy"
+              <LazyImage
                 alt={'TRIP TODO 예약 목록 화면'}
                 src={'/static/reservation-main.png'}
               />
@@ -172,8 +178,7 @@ export default async function Page() {
                 gradientTo="rgba(255, 255, 255, 0.8)"
               />
             </Box>
-            <Image
-              loading="lazy"
+            <LazyImage
               alt={'항공사 모바일 탑승권'}
               position={'absolute'}
               top={120}
@@ -183,8 +188,7 @@ export default async function Page() {
               shadow={'md'}
               borderRadius={'3xl'}
             />
-            <Image
-              loading="lazy"
+            <LazyImage
               alt={'Visit Japan'}
               position={'absolute'}
               top={300}
@@ -246,8 +250,7 @@ export default async function Page() {
               overflow={'hidden'}
               shadow={'md'}
               borderRadius={'3xl'}>
-              <Image
-                loading="lazy"
+              <LazyImage
                 alt={'아고다 숙소 예약 화면 캡쳐'}
                 src={'/static/imageAnalysis-agoda.png'}
                 mt={-24}
