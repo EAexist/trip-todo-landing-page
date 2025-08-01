@@ -42,11 +42,11 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
           type="image/webp"
           href="/static/mockup-todolist.webp"
         />
-        {/* <link
+        <link
           rel="preconnect"
           href="https://cdn.jsdelivr.net"
           crossOrigin="anonymous"
-        /> */}
+        />
         <link
           rel="preload"
           fetchPriority="low"
