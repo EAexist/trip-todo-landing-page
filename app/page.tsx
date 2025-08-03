@@ -266,8 +266,7 @@ export default async function Page() {
                 gradientTo="rgba(255, 255, 255, 0.8)"
               />
             </Box>
-            <Image
-              loading="lazy"
+            <LazyImage
               alt={'TRIP TODO 숙소 예약 내역'}
               position={'absolute'}
               top={120}
