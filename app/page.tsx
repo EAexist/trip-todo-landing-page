@@ -70,16 +70,6 @@ export default async function Page() {
             bgImg={'url(/static/mockup-todolist.webp)'}
             bgSize={'contain'}
             bgRepeat={'no-repeat'}>
-            {/* <Image
-              alt={'TRIP TODO 앱 메인 화면'}
-              flex={1}
-              w={'100%'}
-              h={'100%'}
-              ml={-3}
-              fit={'contain'}
-              src={'/static/mockup-todolist.png'}
-              fetchPriority="high"
-            /> */}
             <VStack
               position={'absolute'}
               top={'35%'}
