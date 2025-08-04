@@ -1,9 +1,9 @@
 import LandingPageFooter from '@/components/LandingPageFooter'
 // import NavBar from '@/components/NavBar'
-import {Box, Container} from '@chakra-ui/react'
-import localFont from 'next/font/local'
+import {Container} from '@chakra-ui/react'
 // import Provider from './provider'
 import dynamic from 'next/dynamic'
+import '@/theme/font.css'
 
 const NavBar = dynamic(() => import('@/components/NavBar'))
 const Provider = dynamic(() => import('./provider'))
@@ -58,11 +58,6 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
         />
       </head>
       <body>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `document.getElementById("font-pretendard-variable").rel="stylesheet";`,
-          }}
-        />
         <Provider>
           <Container px={0} py={0} maxW={'none'}>
             <NavBar />
@@ -71,6 +66,11 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
             <LandingPageFooter />
           </Container>
         </Provider>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `document.getElementById("font-pretendard-variable").rel="stylesheet";`,
+          }}
+        />
       </body>
     </html>
   )

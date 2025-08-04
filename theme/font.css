@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'pretendardVariable Fallback';
+  src: local('Arial');
+  ascent-override: 93.76%;
+  descent-override: 23.75%;
+  line-gap-override: 0%;
+  size-adjust: 101.55%;
+}
