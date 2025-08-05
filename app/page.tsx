@@ -272,7 +272,7 @@ export default async function Page() {
       <Flex
         hideFrom={'md'}
         position={'fixed'}
-        zIndex={1000}
+        zIndex={990}
         bottom={0}
         left={0}
         width={'100%'}

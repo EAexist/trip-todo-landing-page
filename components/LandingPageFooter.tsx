@@ -65,7 +65,7 @@ export default function LandingPageFooter() {
       px={{base: 6, md: 40}}
       py={{base: 16}}
       justifyContent={{base: 'stretch', md: 'auto'}}
-      pb={{base: 162, md: 16}}>
+      pb={{md: 16}}>
       <Stack
         maxWidth={'7xl'}
         width={{base: 'auto', md: '100%'}}

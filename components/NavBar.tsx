@@ -1,50 +1,61 @@
 'use client'
 
 import {
+  Collapsible,
   Flex,
+  HStack,
+  Icon,
   IconButton,
   LinkBox,
   LinkOverlay,
   Stack,
   Text,
   useDisclosure,
+  VStack,
 } from '@chakra-ui/react'
 import {Menu, X} from 'lucide-react'
 import {Logo} from './Logo'
 import {useColorModeValue} from './ui/color-mode'
-import {HTMLAttributeAnchorTarget} from 'react'
+import {HTMLAttributeAnchorTarget, useState} from 'react'
 
 export default function NavBar() {
-  const {open, onToggle} = useDisclosure()
+  //   const {open, onToggle} = useDisclosure()
+
+  const [open, setOpen] = useState(false)
 
   return (
-    <Flex
+    <Collapsible.Root
+      onOpenChange={({open}) => setOpen(open)}
+      bg={'rgba(255, 255, 255, 0.5)'}
+      backdropFilter={'blur(10px)'}
       as="header"
       position="fixed"
       zIndex={1000}
       w={'100vw'}
-      bg={'rgba(255, 255, 255, 0.5)'}
-      backdropFilter={'blur(10px)'}>
+      display={'flex'}
+      flexDir={'column'}>
       <Flex
         h={{base: 12, md: '60px'}}
         align={'center'}
-        flex={1}
+        // position={{base: 'absolute', md: 'static'}}
+        // flex={1}
         px={{base: 2, md: 6}}>
         <Flex
           hideFrom={'md'}
           // flex={{ base: 1, md: 'auto' }}
           // ml={{ base: -2 }}
         >
-          <IconButton
-            onClick={onToggle}
-            variant={'ghost'}
-            aria-label={'Toggle Navigation'}>
-            {open ? <X width={3} /> : <Menu width={5} />}
-          </IconButton>
+          <Collapsible.Trigger
+            aria-label={'Toggle Navigation'}
+            p={1}
+            hideFrom={'md'}>
+            {open ? <X width={24} /> : <Menu width={24} />}
+          </Collapsible.Trigger>
         </Flex>
         <Flex
           flex={{base: 1, md: 'none'}}
           paddingRight={{base: 10, md: 0}}
+          w={{md: 120}}
           justify={{base: 'center'}}>
           <LinkBox as="button">
             <LinkOverlay href={'/'}>
@@ -56,14 +67,14 @@ export default function NavBar() {
           hideBelow={'md'}
           flex={1}
           justify={{base: 'center', md: 'center'}}
-          paddingRight={40}>
+          paddingRight={120}>
           <DesktopNav />
         </Flex>
       </Flex>
-      {/* <Collapse in={isOpen} animateOpacity>
-                <MobileNav />
-            </Collapse> */}
-    </Flex>
+      <Collapsible.Content h={'100vh'} hideFrom={'md'}>
+        <MobileNav />
+      </Collapsible.Content>
+    </Collapsible.Root>
   )
 }
 
@@ -72,7 +83,7 @@ const DesktopNav = () => {
   const linkHoverColor = useColorModeValue('gray.800', 'white')
 
   return (
-    <Stack direction={'row'} gap={10}>
+    <HStack gap={10}>
       {NAV_ITEMS.map(navItem => (
         <LinkBox
           key={navItem.label}
@@ -89,16 +100,13 @@ const DesktopNav = () => {
           {navItem.label}
         </LinkBox>
       ))}
-    </Stack>
+    </HStack>
   )
 }
 
 const MobileNav = () => {
   return (
-    <Stack
-      bg={useColorModeValue('white', 'gray.800')}
-      p={4}
-      display={{md: 'none'}}>
+    <Stack dir={'column'} p={6}>
       {NAV_ITEMS.map(navItem => (
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
@@ -106,19 +114,21 @@ const MobileNav = () => {
   )
 }
 
-const MobileNavItem = ({label, href}: NavItem) => {
+const MobileNavItem = ({label, href, target}: NavItem) => {
   return (
     <LinkBox
       py={2}
       as="button"
-      justifyContent="space-between"
-      alignItems="center"
+      //   justifyContent="space-between"
+      //   alignItems="flex-start"
       _hover={{
         textDecoration: 'none',
       }}>
-      {/* <LinkOverlay
-                href={href ?? '#'} /> */}
-      <Text fontWeight={600} color={useColorModeValue('gray.600', 'gray.200')}>
+      <LinkOverlay target={target} href={href ?? '#'} />
+      <Text
+        fontWeight={600}
+        color={useColorModeValue('gray.600', 'gray.200')}
+        textAlign={'start'}>
         {label}
       </Text>
     </LinkBox>
