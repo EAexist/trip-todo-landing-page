@@ -6,18 +6,18 @@ import {ChevronRight} from 'lucide-react'
 export default async function Page() {
   return (
     <Section
-      pb={{base: '60px', md: '60px'}}
-      height={{base: '100vh', md: '100vh'}}>
+      pb={{base: 12, md: 0}}
+      height={{base: '100vh', md: '100vh'}}
+      pt={{base: 12, md: '60px'}}>
       <Stack
         maxWidth={'7xl'}
         width={'100%'}
         align={'stretch'}
         justifyContent={'center'}
-        py={{base: 6, md: 6}}
-        pt={{base: 18, md: '84px'}}
+        py={2}
         gap={{base: 12, md: 32}}
         direction={{base: 'row', md: 'row'}}>
-        <Stack justifyContent={'center'} align={'center'}>
+        <Stack justifyContent={'center'} align={'center'} pb={{md: '60px'}}>
           <Stack gap={{base: 4, md: 4}}>
             <Heading as="h3" style={{lineHeight: 1.5}}>
               TRIP TODO를
