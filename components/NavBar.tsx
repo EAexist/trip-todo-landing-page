@@ -12,6 +12,7 @@ import {
 import {Menu, X} from 'lucide-react'
 import {Logo} from './Logo'
 import {useColorModeValue} from './ui/color-mode'
+import {HTMLAttributeAnchorTarget} from 'react'
 
 export default function NavBar() {
   const {open, onToggle} = useDisclosure()
@@ -84,7 +85,7 @@ const DesktopNav = () => {
             textDecoration: 'none',
             color: linkHoverColor,
           }}>
-          <LinkOverlay href={navItem.href ?? '#'} />
+          <LinkOverlay href={navItem.href ?? '#'} target={navItem.target} />
           {navItem.label}
         </LinkBox>
       ))}
@@ -129,6 +130,7 @@ interface NavItem {
   subLabel?: string
   children?: Array<NavItem>
   href?: string
+  target?: HTMLAttributeAnchorTarget
 }
 
 const NAV_ITEMS: Array<NavItem> = [
@@ -143,5 +145,6 @@ const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'CONTACT',
     href: process.env.NEXT_PUBLIC_EAEXIST_GITHUB_URL,
+    target: '_blank',
   },
 ]

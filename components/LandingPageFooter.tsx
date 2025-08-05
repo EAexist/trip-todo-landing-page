@@ -2,9 +2,8 @@
 
 import {
   Box,
-  Button,
-  chakra,
   Heading,
+  IconButton,
   Stack,
   Text,
   VisuallyHidden,
@@ -26,10 +25,10 @@ const SocialButton = ({
   href?: string
 }) => {
   return (
-    <Button
+    <IconButton
       asChild
       bg={'#3C474C'}
-      rounded={'full'}
+      //   rounded={'full'}
       w={8}
       h={8}
       cursor={'pointer'}
@@ -41,11 +40,11 @@ const SocialButton = ({
         // bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
         bg: 'blackAlpha.200',
       }}>
-      <a href={href}>
+      <a target="_blank" href={href}>
         <VisuallyHidden>{label}</VisuallyHidden>
         {children}
       </a>
-    </Button>
+    </IconButton>
   )
 }
 
@@ -90,18 +89,18 @@ export default function LandingPageFooter() {
               href={process.env.NEXT_PUBLIC_EAEXIST_GITHUB_URL}>
               <FaGithub />
             </SocialButton>
-            <SocialButton
+            {/* <SocialButton
               label={'Notion'}
               href={process.env.NEXT_PUBLIC_EAEXIST_RESUME_URL}>
               <SiNotion />
-            </SocialButton>
+            </SocialButton> */}
           </Stack>
         </Stack>
         <Stack direction="row" gap={{base: 0, md: 7}} mt={{base: 1, md: 1}}>
           <Stack gap={{base: 6}} minW={{base: 0, md: 40}}>
             <ListHeader>EAexist</ListHeader>
             <Stack gap={{base: 3}}>
-              <Box asChild>
+              {/* <Box asChild>
                 <a href={process.env.NEXT_PUBLIC_EAEXIST_RESUME_URL}>
                   <Text
                     color={'neutral.footerContrastText'}
@@ -110,9 +109,11 @@ export default function LandingPageFooter() {
                     About Me
                   </Text>
                 </a>
-              </Box>
+              </Box> */}
               <Box asChild>
-                <a href={process.env.NEXT_PUBLIC_EAEXIST_GITHUB_URL}>
+                <a
+                  target="_blank"
+                  href={process.env.NEXT_PUBLIC_EAEXIST_GITHUB_URL}>
                   <Text
                     color={'neutral.footerContrastText'}
                     fontWeight={{base: 'light', md: 'regular'}}
