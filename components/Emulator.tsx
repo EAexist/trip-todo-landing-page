@@ -37,7 +37,7 @@ export default function Emulator() {
 
   return (
     // breakpoint === "md" ?
-    <Flex ref={divRef} maxH={900} minW={350} height={'100%'}>
+    <Flex ref={divRef} minW={350} height={'100%'}>
       <IPhoneMockup
         screenWidth={screenWidth}
         screenType={'notch'}
