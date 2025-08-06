@@ -4,6 +4,7 @@ import {
   Box,
   Heading,
   IconButton,
+  LinkOverlay,
   Stack,
   Text,
   VisuallyHidden,
@@ -27,21 +28,20 @@ const SocialButton = ({
   return (
     <IconButton
       asChild
-      bg={'#3C474C'}
-      //   rounded={'full'}
-      w={8}
-      h={8}
+      rounded={'full'}
+      size={'xs'}
       cursor={'pointer'}
-      display={'inline-flex'}
       alignItems={'center'}
       justifyContent={'center'}
+      bg={'#3C474C'}
       transition={'background 0.3s ease'}
       _hover={{
         // bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
         bg: 'blackAlpha.200',
-      }}>
+      }}
+      //   p={0}
+    >
       <a target="_blank" href={href}>
-        <VisuallyHidden>{label}</VisuallyHidden>
         {children}
       </a>
     </IconButton>
@@ -83,11 +83,11 @@ export default function LandingPageFooter() {
               All rights reserved
             </Text>
           </Stack>
-          <Stack direction={'row'} gap={4} alignItems={'center'}>
+          <Stack direction={'row'} gap={4}>
             <SocialButton
               label={'Github'}
               href={process.env.NEXT_PUBLIC_EAEXIST_GITHUB_URL}>
-              <FaGithub />
+              <FaGithub size={20} />
             </SocialButton>
             {/* <SocialButton
               label={'Notion'}

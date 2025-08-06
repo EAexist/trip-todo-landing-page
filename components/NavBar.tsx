@@ -153,7 +153,7 @@ const NAV_ITEMS: Array<NavItem> = [
     href: 'trial',
   },
   {
-    label: 'CONTACT',
+    label: 'EAexist',
     href: process.env.NEXT_PUBLIC_EAEXIST_GITHUB_URL,
     target: '_blank',
   },

@@ -17,6 +17,7 @@ export default function AppIframe() {
       title="TRIP TODO APP"
       width={'100%'}
       height={'100%'}
+      style={{paddingTop: '8%'}}
     />
   )
 }

@@ -7,7 +7,7 @@ export default async function Page() {
   return (
     <Section
       pb={{base: 12, md: 0}}
-      height={{base: '100vh', md: '100vh'}}
+      minH={{base: '100vh', md: '100vh'}}
       pt={{base: 12, md: '60px'}}>
       <Stack
         maxWidth={'7xl'}
@@ -31,7 +31,13 @@ export default async function Page() {
             </Button>
           </Stack>
         </Stack>
-        <Flex hideBelow={'md'} px={{base: 0, md: 0}} alignItems={'center'}>
+        <Flex
+          hideBelow={'md'}
+          px={{base: 0, md: 0}}
+          alignItems={'center'}
+          h={'100vh'}
+          maxH={900}
+          minH={720}>
           <Emulator />
         </Flex>
       </Stack>
